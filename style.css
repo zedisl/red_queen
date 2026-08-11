@@ -2648,3 +2648,495 @@ body.rq-glitch {
     }
 
 }
+
+```css
+/* =========================================================
+   CONTRACT // OFFICIAL DOCUMENT
+   ========================================================= */
+
+.contract-page-header {
+    margin-bottom: 22px;
+}
+
+.contract-classification {
+    text-align: right;
+    font-size: 9px;
+    letter-spacing: 2px;
+    color: rgba(255,255,255,.38);
+}
+
+.contract-classification span {
+    display: block;
+    margin-bottom: 6px;
+}
+
+.contract-classification strong {
+    color: rgba(255,30,55,.7);
+    letter-spacing: 3px;
+}
+
+
+/* DOCUMENT */
+
+.contract-document {
+    position: relative;
+
+    max-width: 900px;
+    margin: 0 auto;
+
+    padding: 32px 42px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,.025),
+            rgba(0,0,0,.28)
+        );
+
+    border: 1px solid rgba(255,255,255,.14);
+
+    box-shadow:
+        0 0 35px rgba(0,0,0,.35),
+        inset 0 0 80px rgba(255,0,30,.015);
+
+    color: rgba(255,255,255,.72);
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    line-height: 1.75;
+}
+
+
+/* TOP */
+
+.document-top {
+    display: flex;
+    justify-content: space-between;
+
+    padding-bottom: 12px;
+    margin-bottom: 20px;
+
+    border-bottom:
+        1px solid rgba(255,255,255,.12);
+
+    font-size: 9px;
+    letter-spacing: 1.5px;
+
+    color: rgba(255,255,255,.38);
+}
+
+
+/* CLASSIFICATION */
+
+.document-warning {
+    text-align: center;
+
+    padding: 9px;
+
+    margin-bottom: 35px;
+
+    border:
+        1px solid rgba(255,25,50,.25);
+
+    background:
+        rgba(255,0,30,.035);
+
+    color:
+        rgba(255,50,70,.65);
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+}
+
+
+/* TITLE */
+
+.document-title {
+    text-align: center;
+
+    margin-bottom: 35px;
+}
+
+.document-number {
+    margin-bottom: 12px;
+
+    color:
+        rgba(255,30,55,.75);
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+}
+
+.document-title h2 {
+    margin: 0;
+
+    font-size: 20px;
+
+    font-weight: normal;
+
+    color:
+        rgba(255,255,255,.88);
+
+    line-height: 1.5;
+}
+
+
+/* META */
+
+.document-meta {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 1px;
+
+    margin-bottom: 38px;
+
+    border:
+        1px solid rgba(255,255,255,.09);
+}
+
+.document-meta > div {
+    padding: 13px 15px;
+
+    background:
+        rgba(255,255,255,.018);
+}
+
+.document-meta span {
+    display: block;
+
+    margin-bottom: 5px;
+
+    font-size: 8px;
+
+    letter-spacing: 1.5px;
+
+    color:
+        rgba(255,255,255,.3);
+}
+
+.document-meta strong {
+    font-size: 11px;
+
+    font-weight: normal;
+
+    color:
+        rgba(255,255,255,.72);
+}
+
+
+/* SECTIONS */
+
+.contract-section {
+    margin-bottom: 38px;
+}
+
+.contract-section h3 {
+    margin: 0 0 20px;
+
+    padding-bottom: 9px;
+
+    border-bottom:
+        1px solid rgba(255,255,255,.12);
+
+    color:
+        rgba(255,255,255,.9);
+
+    font-size: 12px;
+
+    letter-spacing: 1.5px;
+}
+
+.contract-section h3::before {
+    content: "§ ";
+
+    color:
+        rgba(255,30,55,.65);
+}
+
+.contract-section p {
+    margin: 0 0 15px;
+
+    font-size: 11px;
+}
+
+.contract-section strong {
+    color:
+        rgba(255,255,255,.92);
+}
+
+.contract-section ul {
+    margin:
+        12px 0 20px 22px;
+
+    padding: 0;
+}
+
+.contract-section li {
+    margin-bottom: 8px;
+
+    font-size: 11px;
+
+    color:
+        rgba(255,255,255,.62);
+}
+
+
+/* PRIMARY DIRECTIVE */
+
+.contract-clause {
+    margin: 20px 0 25px;
+
+    padding: 20px;
+
+    border-left:
+        3px solid rgba(255,25,50,.65);
+
+    background:
+        rgba(255,0,30,.035);
+
+    box-shadow:
+        inset 0 0 25px rgba(255,0,30,.025);
+}
+
+.contract-clause span {
+    display: block;
+
+    margin-bottom: 10px;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+
+    color:
+        rgba(255,255,255,.35);
+}
+
+.contract-clause strong {
+    display: block;
+
+    margin-bottom: 12px;
+
+    font-size: 14px;
+
+    letter-spacing: 1px;
+
+    color:
+        rgba(255,35,60,.9);
+}
+
+.contract-clause p {
+    margin: 0;
+
+    font-size: 10px;
+
+    color:
+        rgba(255,255,255,.55);
+}
+
+
+/* CRITICAL SECTION */
+
+.contract-critical {
+    padding: 22px;
+
+    border:
+        1px solid rgba(255,25,50,.3);
+
+    background:
+        rgba(255,0,30,.025);
+
+    box-shadow:
+        0 0 25px rgba(255,0,30,.035);
+}
+
+.contract-critical h3 {
+    color:
+        rgba(255,40,60,.9);
+}
+
+
+/* FINAL */
+
+.contract-final {
+    margin-top: 45px;
+
+    padding-top: 30px;
+
+    border-top:
+        1px solid rgba(255,255,255,.12);
+}
+
+.final-formula {
+    padding: 25px;
+
+    text-align: center;
+
+    border:
+        1px solid rgba(255,255,255,.08);
+
+    background:
+        rgba(0,0,0,.15);
+
+    font-size: 11px;
+
+    line-height: 2.1;
+
+    color:
+        rgba(255,255,255,.62);
+}
+
+.final-formula .red {
+    font-size: 13px;
+
+    text-shadow:
+        0 0 12px rgba(255,0,30,.4);
+}
+
+
+/* SIGNATURES */
+
+.document-signatures {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+
+    margin-top: 55px;
+
+    padding-top: 25px;
+
+    border-top:
+        1px solid rgba(255,255,255,.1);
+}
+
+.signature {
+    text-align: center;
+}
+
+.signature span {
+    display: block;
+
+    margin-bottom: 20px;
+
+    font-size: 8px;
+
+    letter-spacing: 1.5px;
+
+    color:
+        rgba(255,255,255,.3);
+}
+
+.signature strong {
+    display: block;
+
+    min-height: 20px;
+
+    font-size: 10px;
+
+    font-weight: normal;
+
+    color:
+        rgba(255,255,255,.65);
+}
+
+.signature-line {
+    margin-top: 12px;
+
+    border-bottom:
+        1px solid rgba(255,255,255,.2);
+}
+
+
+/* DOCUMENT FOOTER */
+
+.document-footer {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-top: 35px;
+    padding-top: 15px;
+
+    border-top:
+        1px solid rgba(255,255,255,.1);
+
+    font-size: 8px;
+
+    letter-spacing: 1px;
+
+    color:
+        rgba(255,255,255,.28);
+}
+
+
+/* ARCHIVE WARNING */
+
+.contract-system-warning {
+    max-width: 900px;
+
+    margin: 14px auto 0;
+
+    padding: 10px 15px;
+
+    border:
+        1px solid rgba(255,255,255,.07);
+
+    text-align: center;
+
+    font-size: 8px;
+
+    letter-spacing: 1.5px;
+
+    color:
+        rgba(255,255,255,.28);
+}
+
+.contract-system-warning .warning {
+    color:
+        rgba(255,180,0,.65);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .contract-document {
+        padding: 22px 18px;
+    }
+
+    .document-top {
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .document-meta {
+        grid-template-columns: 1fr;
+    }
+
+    .document-title h2 {
+        font-size: 16px;
+    }
+
+    .document-signatures {
+        grid-template-columns: 1fr;
+    }
+
+    .document-footer {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+}
+```
