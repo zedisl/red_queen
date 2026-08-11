@@ -1337,3 +1337,159 @@ footer span {
     }
 
 }
+
+/* =========================================================
+   BOOT COMPLETE // WAIT FOR USER
+   ========================================================= */
+
+#boot-complete {
+    position: fixed;
+
+    left: 0;
+    right: 0;
+    bottom: 35px;
+
+    z-index: 10000;
+
+    display: flex;
+    justify-content: center;
+
+    pointer-events: none;
+
+    animation:
+        bootCompleteAppear 0.8s ease-out;
+}
+
+
+.boot-complete-inner {
+
+    text-align: center;
+
+    font-family:
+        "Courier New",
+        Courier,
+        monospace;
+
+    color: #ff2020;
+
+    text-shadow:
+        0 0 5px rgba(255, 0, 0, 0.9),
+        0 0 15px rgba(255, 0, 0, 0.55),
+        0 0 30px rgba(255, 0, 0, 0.25);
+
+}
+
+
+.boot-complete-line {
+
+    font-size: 14px;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 14px;
+
+}
+
+
+.boot-cursor-symbol {
+
+    animation:
+        bootCursorBlink 0.8s infinite;
+
+}
+
+
+.boot-complete-hint {
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    opacity: 0.7;
+
+    animation:
+        bootHintPulse 1.5s infinite;
+
+}
+
+
+.boot-complete-hint-ru {
+
+    margin-top: 7px;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    opacity: 0.3;
+
+}
+
+
+.boot-complete-exit {
+
+    animation:
+        bootCompleteExit 0.4s ease-in forwards;
+
+}
+
+
+/* =========================================================
+   ANIMATIONS
+   ========================================================= */
+
+@keyframes bootCompleteAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+@keyframes bootCompleteExit {
+
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+
+}
+
+
+@keyframes bootCursorBlink {
+
+    0%,
+    45% {
+        opacity: 1;
+    }
+
+    46%,
+    100% {
+        opacity: 0.15;
+    }
+
+}
+
+
+@keyframes bootHintPulse {
+
+    0%,
+    100% {
+        opacity: 0.35;
+    }
+
+    50% {
+        opacity: 0.9;
+    }
+
+}
