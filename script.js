@@ -911,62 +911,25 @@ const bootSequence = [
 
 
 /* =========================================================
-   BOOT ENGINE
-   ========================================================= */
-
-/* =========================================================
 BOOT ENGINE
 ========================================================= */
 
 let bootIndex = 0;
-let bootPaused = false;
-let bootPauseShown = false;
+let bootFinished = false;
+let bootContinueHandler = null;
 
 function bootNext() {
 
-    if (bootIndex >= bootSequence.length) {
-
-        setTimeout(() => {
-
-            bootScreen.style.transition =
-                "opacity 1.2s ease";
-
-            bootScreen.style.opacity = "0";
-
-            setTimeout(() => {
-
-                bootScreen.remove();
-
-                mainSystem.classList.remove("hidden");
-
-                document
-                    .getElementById("command-input")
-                    .focus();
-
-            }, 1200);
-
-        }, 1600);
-
-        return;
-    }
-
     /*
-     * ПАУЗА ПОСЛЕ ПЕРВОГО BOOT-БЛОКА
-     *
-     * Останавливаемся сразу после:
-     *
-     * DEMONIC CORE..................... [ WARNING ]
+     * Весь boot полностью проигрывается.
+     * Никаких пауз посередине.
      */
 
-    if (
-        !bootPauseShown &&
-        bootSequence[bootIndex].text === "[ POST-BOOT DIAGNOSTICS ]"
-    ) {
+    if (bootIndex >= bootSequence.length) {
 
-        bootPaused = true;
-        bootPauseShown = true;
+        bootFinished = true;
 
-        showBootPause();
+        showBootComplete();
 
         return;
     }
@@ -993,6 +956,163 @@ function bootNext() {
     setTimeout(bootNext, delay);
 }
 
+
+/* =========================================================
+BOOT COMPLETE
+========================================================= */
+
+function showBootComplete() {
+
+    const continueScreen =
+        document.createElement("div");
+
+    continueScreen.id =
+        "boot-complete";
+
+    continueScreen.innerHTML = `
+        <div class="boot-complete-inner">
+
+            <div class="boot-complete-line">
+                <span class="boot-cursor-symbol">█</span>
+                BOOT COMPLETE
+            </div>
+
+            <div class="boot-complete-hint">
+                PRESS ANY KEY TO ENTER
+            </div>
+
+            <div class="boot-complete-hint-ru">
+                нажмите любую клавишу...
+            </div>
+
+        </div>
+    `;
+
+    bootScreen.appendChild(continueScreen);
+
+
+    /*
+     * Любая клавиша
+     */
+
+    bootContinueHandler = () => {
+
+        if (!bootFinished) {
+            return;
+        }
+
+        finishBoot();
+
+    };
+
+
+    document.addEventListener(
+        "keydown",
+        bootContinueHandler
+    );
+
+    document.addEventListener(
+        "click",
+        bootContinueHandler
+    );
+
+    document.addEventListener(
+        "touchstart",
+        bootContinueHandler
+    );
+}
+
+
+/* =========================================================
+ENTER MAIN SYSTEM
+========================================================= */
+
+function finishBoot() {
+
+    /*
+     * Защита от двойного запуска
+     */
+
+    if (!bootFinished) {
+        return;
+    }
+
+    bootFinished = false;
+
+
+    if (bootContinueHandler) {
+
+        document.removeEventListener(
+            "keydown",
+            bootContinueHandler
+        );
+
+        document.removeEventListener(
+            "click",
+            bootContinueHandler
+        );
+
+        document.removeEventListener(
+            "touchstart",
+            bootContinueHandler
+        );
+
+    }
+
+
+    /*
+     * Убираем надпись PRESS ANY KEY
+     */
+
+    const complete =
+        document.getElementById(
+            "boot-complete"
+        );
+
+    if (complete) {
+
+        complete.classList.add(
+            "boot-complete-exit"
+        );
+
+    }
+
+
+    /*
+     * Красивый переход
+     */
+
+    bootScreen.style.transition =
+        "opacity 1.2s ease";
+
+    bootScreen.style.opacity = "0";
+
+
+    setTimeout(() => {
+
+        bootScreen.remove();
+
+        mainSystem.classList.remove(
+            "hidden"
+        );
+
+        document
+            .getElementById("command-input")
+            .focus();
+
+    }, 1200);
+
+}
+
+
+/* =========================================================
+START
+========================================================= */
+
+setTimeout(
+    bootNext,
+    500
+);
 
 /* =========================================================
 BOOT PAUSE
