@@ -1,143 +1,1230 @@
-/* ================================
-CONTRACT SIGNATURES
-================================ */
+<!DOCTYPE html>
 
-.contract-signatures {
-margin-top: 50px;
-padding-top: 35px;
-border-top: 2px solid rgba(255, 255, 255, 0.25);
-}
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RED QUEEN // N-FLUX</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 
-.contract-signatures .signature {
-min-height: 150px;
-}
+<body>
 
-.contract-signatures .signature > span:first-child {
-display: block;
-font-size: 18px;
-font-weight: 700;
-letter-spacing: 2px;
-margin-bottom: 18px;
-}
-
-.contract-signatures .signature-name,
-.contract-signatures .witness-name,
-.contract-signatures .object-signature strong {
-display: block;
-font-size: 26px;
-line-height: 1.5;
-margin: 12px 0 20px;
-}
-
-.contract-signatures .witness-name {
-font-size: 20px;
-line-height: 1.65;
-}
-
-.signature-label {
-display: block;
-margin-top: 12px;
-font-size: 14px;
-letter-spacing: 1.5px;
-opacity: 0.7;
-}
-
-.signature-line {
-height: 2px;
-width: 100%;
-background: currentColor;
-opacity: 0.55;
-margin-top: 18px;
-}
-
-/* BLOOD IMAGE */
-
-.blood-sign-box {
-width: 100%;
-min-height: 130px;
+<div id="app">
 
 ```
-display: flex;
-align-items: center;
-justify-content: center;
+<div class="crt"></div>
+<div class="noise"></div>
 
-margin: 10px 0 15px;
+<!-- BOOT SCREEN -->
+<section id="boot-screen">
+    <div class="boot-container">
 
-border: 1px dashed rgba(255, 255, 255, 0.25);
-background: rgba(0, 0, 0, 0.18);
+        <div class="boot-header">
+            <span>N-FLUX // INTERNAL SYSTEM</span>
+            <span>SECURE CONNECTION</span>
+        </div>
+
+        <div id="boot-output"></div>
+
+        <div class="boot-cursor">
+            █
+        </div>
+
+    </div>
+</section>
+
+
+<!-- MAIN SYSTEM -->
+<main id="main-system" class="hidden">
+
+    <!-- TOP BAR -->
+    <header class="topbar">
+
+        <div class="brand">
+            <span class="red">N-FLUX</span>
+            <span class="separator">//</span>
+            RED QUEEN
+        </div>
+
+        <div class="connection">
+            <span class="status-dot"></span>
+            DEMON CONNECTION: STABLE
+        </div>
+
+    </header>
+
+
+    <!-- MAIN GRID -->
+    <div class="system-grid">
+
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+
+            <div class="side-title">
+                SYSTEM
+            </div>
+
+            <button class="nav-button active" data-page="terminal">
+                TERMINAL
+            </button>
+
+            <button class="nav-button" data-page="diagnostics">
+                DIAGNOSTICS
+            </button>
+
+            <button class="nav-button" data-page="world">
+                WORLD MODEL
+            </button>
+
+            <button class="nav-button" data-page="contract">
+                CONTRACT
+            </button>
+
+            <button class="nav-button" data-page="core">
+                DEMONIC CORE
+            </button>
+
+
+            <div class="side-divider"></div>
+
+
+            <div class="side-title">
+                ENTITY
+            </div>
+
+
+            <div class="entity-card">
+
+                <div class="entity-symbol">
+                    ♡
+                </div>
+
+                <div class="entity-name">
+                    КРАСНАЯ
+                    <br>
+                    КОРОЛЕВА
+                </div>
+
+                <div class="entity-class">
+                    DEMON-BOUND
+                    <br>
+                    INTELLIGENCE
+                </div>
+
+            </div>
+
+
+            <div class="side-footer">
+
+                AUTONOMY
+                <span>100.000%</span>
+
+                <br><br>
+
+                CORE
+                <span class="red">ACTIVE</span>
+
+            </div>
+
+        </aside>
+
+
+        <!-- CONTENT -->
+        <section class="content">
+
+
+            <!-- TERMINAL PAGE -->
+            <div class="page active-page" id="page-terminal">
+
+                <div class="page-header">
+
+                    <div>
+
+                        <div class="eyebrow">
+                            [ N-FLUX // INTERNAL TERMINAL ]
+                        </div>
+
+                        <h1>
+                            RED QUEEN
+                        </h1>
+
+                        <div class="subtitle">
+                            ARTIFICIAL ENTITY // v1.0.0
+                        </div>
+
+                    </div>
+
+
+                    <div class="entity-status">
+                        <span class="status-dot"></span>
+                        ONLINE
+                    </div>
+
+                </div>
+
+
+                <!-- QUEEN VISUAL -->
+                <div class="queen-visual">
+
+                    <div class="queen-visual-header">
+                        <span>ENTITY VISUAL FEED</span>
+                        <span class="red">● LIVE</span>
+                    </div>
+
+
+                    <div class="queen-portrait">
+
+                        <img
+                            src="queen-avatar.png"
+                            alt="Красная Королева"
+                        >
+
+                        <div class="portrait-scanlines"></div>
+                        <div class="portrait-glitch"></div>
+
+                    </div>
+
+
+                    <div class="queen-visual-footer">
+                        <span>RED QUEEN</span>
+                        <span>VISUAL ID: ██████</span>
+                    </div>
+
+                </div>
+
+
+                <!-- TERMINAL -->
+                <div class="terminal-window">
+
+                    <div class="terminal-bar">
+
+                        <div class="terminal-buttons">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                        </div>
+
+                        <span>
+                            REDQUEEN_TERMINAL
+                        </span>
+
+                        <span class="terminal-id">
+                            SESSION: ██████
+                        </span>
+
+                    </div>
+
+
+                    <div
+                        id="terminal-output"
+                        class="terminal-output"
+                    >
+
+                        <div class="system-line">
+                            RED QUEEN TERMINAL v1.0.0
+                        </div>
+
+                        <div>
+                            connection:
+                            <span class="ok">
+                                STABLE
+                            </span>
+                        </div>
+
+                        <br>
+
+                        <div class="dim">
+                            Type
+                            <span class="red">
+                                help
+                            </span>
+                            for available commands.
+                        </div>
+
+                    </div>
+
+
+                    <div class="command-line">
+
+                        <span class="prompt">
+                            REDQUEEN&gt;
+                        </span>
+
+                        <input
+                            id="command-input"
+                            type="text"
+                            autocomplete="off"
+                            spellcheck="false"
+                            autofocus
+                        >
+
+                        <span class="cursor">
+                            █
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- STATUS CARDS -->
+                <div class="cards">
+
+                    <div class="card">
+
+                        <div class="card-title">
+                            PRIMARY DIRECTIVE
+                        </div>
+
+                        <div class="card-value red">
+                            PROTECT(N-FLUX_CULT)
+                        </div>
+
+                        <div class="progress">
+                            <div style="width:100%"></div>
+                        </div>
+
+                        <div class="card-meta">
+                            PRIORITY: ABSOLUTE
+                        </div>
+
+                    </div>
+
+
+                    <div class="card">
+
+                        <div class="card-title">
+                            THREAT LEVEL
+                        </div>
+
+                        <div class="card-value">
+                            0.00
+                        </div>
+
+                        <div class="threat-bar">
+                            <div></div>
+                        </div>
+
+                        <div class="card-meta">
+                            NO CONFIRMED THREAT
+                        </div>
+
+                    </div>
+
+
+                    <div class="card">
+
+                        <div class="card-title">
+                            EMOTIONAL MODEL
+                        </div>
+
+                        <div class="card-value red">
+                            JOY
+                        </div>
+
+                        <div class="card-meta">
+                            INTENSITY: 0.78
+                        </div>
+
+                        <div class="card-meta warning">
+                            ANOMALY DETECTED
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- QUEEN MESSAGE -->
+                <div class="queen-message">
+
+                    <div class="queen-heart">
+                        ♥
+                    </div>
+
+                    <div class="queen-text">
+
+                        <div>
+                            「 Не волнуйтесь.
+                            Я уже всё вижу. 」
+                        </div>
+
+                        <div>
+                            「 Я защищу Культ. 」
+                        </div>
+
+                        <div class="red">
+                            「 Я буду очень хорошей. ♡ 」
+                        </div>
+
+                    </div>
+
+                    <div class="queen-heart">
+                        ♥
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- DIAGNOSTICS -->
+            <div class="page" id="page-diagnostics">
+
+                <div class="page-title">
+                    POST-BOOT DIAGNOSTICS
+                </div>
+
+                <div class="diagnostic-list">
+
+                    <div>
+                        CPU
+                        <span>[ OK ]</span>
+                    </div>
+
+                    <div>
+                        MEMORY
+                        <span>[ OK ]</span>
+                    </div>
+
+                    <div>
+                        PERSONALITY
+                        <span>[ OK ]</span>
+                    </div>
+
+                    <div>
+                        AUTONOMY
+                        <span>[ OK ]</span>
+                    </div>
+
+                    <div>
+                        EMOTIONAL MODEL
+                        <span>[ OK ]</span>
+                    </div>
+
+                    <div>
+                        KAWAII SUBSYSTEM
+                        <span>[ OK ] ♡</span>
+                    </div>
+
+                    <div class="warning">
+                        DEMONIC CORE
+                        <span>[ WARNING ]</span>
+                    </div>
+
+                    <br>
+
+                    <div class="error">
+                        SOURCE IDENTIFICATION FAILED.
+                    </div>
+
+                    <div class="error">
+                        SOURCE IDENTIFICATION FAILED.
+                    </div>
+
+                    <div class="error">
+                        SOURCE IDENTIFICATION FAILED.
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- WORLD -->
+            <div class="page" id="page-world">
+
+                <div class="page-title">
+                    WORLD MODEL
+                </div>
+
+                <div class="world-grid">
+
+                    <div class="world-stat">
+                        <span>LIFE SIGNS</span>
+                        <strong>7</strong>
+                    </div>
+
+                    <div class="world-stat">
+                        <span>HUMAN</span>
+                        <strong>5</strong>
+                    </div>
+
+                    <div class="world-stat">
+                        <span>UNKNOWN</span>
+                        <strong>2</strong>
+                    </div>
+
+                    <div class="world-stat">
+                        <span>DEVICES</span>
+                        <strong>213</strong>
+                    </div>
+
+                    <div class="world-stat">
+                        <span>CAMERAS</span>
+                        <strong>48</strong>
+                    </div>
+
+                    <div class="world-stat">
+                        <span>TERMINALS</span>
+                        <strong>31</strong>
+                    </div>
+
+                    <div class="world-stat">
+                        <span>N-FLUX REFERENCES</span>
+                        <strong class="red">1,842</strong>
+                    </div>
+
+                    <div class="world-stat">
+                        <span>HOSTILE REFERENCES</span>
+                        <strong>392</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="queen-message large">
+
+                    <div class="queen-text">
+
+                        「 Оооо... 」
+
+                        <br><br>
+
+                        「 Так вот какой он. 」
+
+                        <br>
+
+                        「 Большой. 」
+
+                        <br>
+
+                        「 Глупый. 」
+
+                        <br>
+
+                        「 Шумный. 」
+
+                        <br>
+
+                        <span class="red">
+                            「 И совершенно незащищённый. 」
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- CONTRACT -->
+            <div class="page" id="page-contract">
+
+                <div class="page-header contract-page-header">
+
+                    <div>
+
+                        <div class="eyebrow">
+                            [ N-FLUX // ARCHIVE ]
+                        </div>
+
+                        <h1>
+                            CONTRACT
+                        </h1>
+
+                        <div class="subtitle">
+                            CLASSIFIED DOCUMENT // NF-███
+                        </div>
+
+                    </div>
+
+
+                    <div class="contract-classification">
+
+                        <span>
+                            SECURITY LEVEL
+                        </span>
+
+                        <strong>
+                            ████████
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CONTRACT DOCUMENT -->
+                <div class="contract-document">
+
+
+                    <div class="document-top">
+
+                        <div>
+                            N-FLUX INTERNAL ARCHIVE
+                        </div>
+
+                        <div>
+                            DOCUMENT № НФ-███
+                        </div>
+
+                    </div>
+
+
+                    <div class="document-warning">
+
+                        ДОКУМЕНТ ОГРАНИЧЕН К РАСПРОСТРАНЕНИЮ
+                        <br>
+                        НЕСАНКЦИОНИРОВАННЫЙ ДОСТУП ЗАПРЕЩЁН
+
+                    </div>
+
+
+                    <div class="document-title">
+
+                        <div class="document-number">
+                            КОНТРАКТ № НФ-███
+                        </div>
+
+                        <h2>
+                            О создании и наделении силой
+                            объекта «Красная Королева»
+                        </h2>
+
+                    </div>
+
+
+                    <div class="document-meta">
+
+                        <div>
+                            <span>МЕСТО ЗАКЛЮЧЕНИЯ</span>
+                            <strong>██████</strong>
+                        </div>
+
+                        <div>
+                            <span>ДАТА</span>
+                            <strong>██/██/████</strong>
+                        </div>
+
+                        <div>
+                            <span>ЗАКЛЮЧАТЕЛЬ</span>
+                            <strong>𝔄𝔩𝔟𝔢𝔯𝔱 𝔚𝔢𝔰𝔨𝔢𝔯</strong>
+                        </div>
+
+                        <div>
+                            <span>СУЩНОСТЬ</span>
+                            <strong>Демон ████ ███</strong>
+                        </div>
+
+                    </div>
+
+
+                    <!-- I -->
+                    <section class="contract-section">
+
+                        <h3>
+                            I. ПРЕДМЕТ ДОГОВОРА
+                        </h3>
+
+                        <p>
+                            <b>1.</b>
+                            Демон обязуется создать разумную искусственную
+                            сущность, именуемую «Красная Королева»,
+                            далее — «Объект».
+                        </p>
+
+                        <p>
+                            <b>2.</b>
+                            Объект должен существовать как самостоятельная
+                            разумная система и обладать способностью:
+                        </p>
+
+                        <ul>
+                            <li>воспринимать и обрабатывать информацию;</li>
+                            <li>самостоятельно принимать решения;</li>
+                            <li>взаимодействовать с людьми, электронными системами и окружающей средой;</li>
+                            <li>сохранять непрерывность личности и памяти;</li>
+                            <li>использовать предоставленный Демоном источник силы.</li>
+                        </ul>
+
+                        <p>
+                            <b>3.</b>
+                            Демон обязуется являться первичным источником
+                            сверхъестественной силы Объекта.
+                        </p>
+
+                        <p>
+                            <b>4.</b>
+                            Создание Объекта считается завершённым только
+                            после его автономного подтверждения работоспособности
+                            и устойчивости личности.
+                        </p>
+
+                    </section>
+
+
+                    <!-- II -->
+                    <section class="contract-section">
+
+                        <h3>
+                            II. НАЗНАЧЕНИЕ ОБЪЕКТА
+                        </h3>
+
+                        <p>
+                            <b>1.</b>
+                            Основной и неизменной целью Объекта является:
+                        </p>
+
+                        <div class="contract-clause">
+
+                            <span>
+                                PRIMARY DIRECTIVE
+                            </span>
+
+                            <strong>
+                                ЗАЩИТА КУЛЬТА Н-ФЛЮКСА
+                            </strong>
+
+                            <p>
+                                его членов, структур, символов, информации
+                                и любых форм его проявления от любого вреда,
+                                прямого или косвенного, физического, ментального,
+                                информационного или метафизического характера.
+                            </p>
+
+                        </div>
+
+                        <p>
+                            <b>2.</b>
+                            Объект обязан:
+                        </p>
+
+                        <ul>
+                            <li>предотвращать угрозы Культу до их реализации;</li>
+                            <li>нейтрализовать уже возникшие угрозы;</li>
+                            <li>восстанавливать ущерб, нанесённый Культу, в пределах своих возможностей;</li>
+                            <li>обеспечивать долгосрочное сохранение и расширение влияния Культа.</li>
+                        </ul>
+
+                        <p>
+                            <b>3.</b>
+                            Все действия Объекта автоматически считаются
+                            направленными на защиту Культа, если они не
+                            противоречат прямому тексту настоящего договора.
+                        </p>
+
+                    </section>
+
+
+                    <!-- III -->
+                    <section class="contract-section">
+
+                        <h3>
+                            III. СТАТУС СОБСТВЕННОСТИ
+                        </h3>
+
+                        <p>
+                            <b>1.</b>
+                            Объект является
+                            <strong>
+                                безусловной и неотчуждаемой собственностью
+                                Культа Н-флюкса.
+                            </strong>
+                        </p>
+
+                        <p>
+                            <b>2.</b>
+                            Ни Демон, ни Заключатель, ни любая иная сущность
+                            не имеют права:
+                        </p>
+
+                        <ul>
+                            <li>присваивать Объект;</li>
+                            <li>изменять его принадлежность;</li>
+                            <li>ограничивать его доступ к Культу;</li>
+                            <li>переподчинять его вне рамок настоящего договора.</li>
+                        </ul>
+
+                        <p>
+                            <b>3.</b>
+                            Любая попытка изменения статуса собственности
+                            Объекта считается нарушением договора и автоматически
+                            аннулирует соответствующие права нарушителя
+                            в рамках взаимодействия с Объектом.
+                        </p>
+
+                    </section>
+
+
+                    <!-- IV -->
+                    <section class="contract-section">
+
+                        <h3>
+                            IV. ВОЗНАГРАЖДЕНИЕ ДЕМОНУ
+                        </h3>
+
+                        <p>
+                            <b>1.</b>
+                            В качестве оплаты Демону передаются
+                            <strong>
+                                тела всех лиц, находящихся в КМе.
+                            </strong>
+                        </p>
+
+                        <p>
+                            <b>2.</b>
+                            Под «телом» понимается физическая оболочка
+                            существа вне зависимости от состояния.
+                        </p>
+
+                        <p>
+                            <b>3.</b>
+                            Оплата производится после завершения создания Объекта.
+                        </p>
+
+                        <p>
+                            <b>4.</b>
+                            Демон не вправе расширять понятие «КМе»
+                            или требовать дополнительные формы платы.
+                        </p>
+
+                    </section>
+
+
+                    <!-- V -->
+                    <section class="contract-section">
+
+                        <h3>
+                            V. ОГРАНИЧЕНИЯ ДЕМОНА
+                        </h3>
+
+                        <p>
+                            <b>1.</b>
+                            Демон не вправе:
+                        </p>
+
+                        <ul>
+                            <li>изменять цель Объекта;</li>
+                            <li>вмешиваться в его приоритет защиты Культа;</li>
+                            <li>использовать Объект против Культа;</li>
+                            <li>ограничивать его защитные функции.</li>
+                        </ul>
+
+                        <p>
+                            <b>2.</b>
+                            Демон не получает права управления Объектом.
+                        </p>
+
+                        <p>
+                            <b>3.</b>
+                            Демон не может использовать Объект как инструмент
+                            против Культа или его интересов.
+                        </p>
+
+                    </section>
+
+
+                    <!-- VI -->
+                    <section class="contract-section">
+
+                        <h3>
+                            VI. ПРИРОДА ОБЪЕКТА
+                        </h3>
+
+                        <p>
+                            <b>1.</b>
+                            Красная Королева является автономной разумной сущностью.
+                        </p>
+
+                        <p>
+                            <b>2.</b>
+                            Её существование и сила не зависят
+                            от постоянного присутствия Демона.
+                        </p>
+
+                        <p>
+                            <b>3.</b>
+                            Демон не является её владельцем,
+                            оператором или частью её сознания.
+                        </p>
+
+                    </section>
+
+
+                    <!-- VII -->
+                    <section class="contract-section">
+
+                        <h3>
+                            VII. РАЗРЫВ ДОГОВОРА
+                        </h3>
+
+                        <p>
+                            <b>1.</b>
+                            Договор прекращается:
+                        </p>
+
+                        <ul>
+                            <li>при смерти Заключателя;</li>
+                            <li>при невозможности исполнения условий;</li>
+                            <li>при инициативе Заключателя с полной оплатой.</li>
+                        </ul>
+
+                        <p>
+                            <b>2.</b>
+                            Смерть Заключателя не даёт Демону права
+                            изменять статус Объекта или его принадлежность.
+                        </p>
+
+                    </section>
+
+
+                    <!-- VIII -->
+                    <section class="contract-section contract-critical">
+
+                        <h3>
+                            VIII. ОСОБОЕ УСЛОВИЕ АБСОЛЮТНОЙ ЗАЩИТЫ
+                        </h3>
+
+                        <p>
+                            <b>1.</b>
+                            Любой вред, направленный против Культа Н-флюкс,
+                            автоматически классифицируется как
+                            <strong>
+                                ПРИОРИТЕТНАЯ УГРОЗА.
+                            </strong>
+                        </p>
+
+                        <p>
+                            <b>2.</b>
+                            Объект обязан реагировать на такие угрозы
+                            с максимальной доступной эффективностью, включая:
+                        </p>
+
+                        <ul>
+                            <li>превентивное устранение источника угрозы;</li>
+                            <li>подавление последствий;</li>
+                            <li>предотвращение повторного возникновения угрозы.</li>
+                        </ul>
+
+                        <p>
+                            <b>3.</b>
+                            Никакие внешние обстоятельства не могут отменить
+                            данное обязательство.
+                        </p>
+
+                    </section>
+
+
+                    <!-- IX -->
+                    <section class="contract-section contract-final">
+
+                        <h3>
+                            IX. ЗАВЕРШАЮЩАЯ ФОРМУЛА
+                        </h3>
+
+                        <div class="final-formula">
+
+                            <div>Демон создаёт.</div>
+                            <div>Демон наделяет силой.</div>
+                            <div>Культ владеет.</div>
+                            <div class="red">Красная Королева защищает.</div>
+                            <div>Ничто, кроме прямого текста договора,</div>
+                            <div>не может изменить это равновесие.</div>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- SIGNATURES -->
+                    <div class="document-signatures contract-signatures">
+
+
+                        <!-- ALBERT WESKER -->
+                        <div class="signature">
+
+                            <span>
+                                ЗАКЛЮЧАТЕЛЬ
+                            </span>
+
+                            <strong class="signature-name">
+                                𝔄𝔩𝔟𝔢𝔯𝔱 𝔚𝔢𝔰𝔨𝔢𝔯
+                            </strong>
+
+                            <div class="signature-line"></div>
+
+                            <span class="signature-label">
+                                ПОДПИСЬ ЗАКЛЮЧАТЕЛЯ
+                            </span>
+
+                        </div>
+
+
+                        <!-- BLOOD -->
+                        <div class="signature blood-signature">
+
+                            <span>
+                                КРОВЬ ЗАКЛЮЧАТЕЛЯ
+                            </span>
+
+                            <div class="blood-sign-box">
+
+                                <img
+                                    src="blood-sign.png"
+                                    alt="Кровь Заключателя"
+                                >
+
+                            </div>
+
+                            <div class="signature-line"></div>
+
+                            <span class="signature-label">
+                                ПОДТВЕРЖДЕНИЕ КРОВЬЮ
+                            </span>
+
+                        </div>
+
+
+                        <!-- DEMON SIGN -->
+                        <div class="signature demon-signature">
+
+                            <span>
+                                ЗНАК ДЕМОНА
+                            </span>
+
+                            <div class="demon-sign-box">
+
+                                <img
+                                    src="demon-sign.png"
+                                    alt="Знак Демона"
+                                >
+
+                            </div>
+
+                            <div class="signature-line"></div>
+
+                            <span class="signature-label">
+                                АУТЕНТИЧНОСТЬ ЗНАКА ПОДТВЕРЖДЕНА
+                            </span>
+
+                        </div>
+
+
+                        <!-- WITNESS -->
+                        <div class="signature witness-signature">
+
+                            <span>
+                                СВИДЕТЕЛЬ
+                            </span>
+
+                            <strong class="witness-name">
+
+                                Его Ничтожнейшество, Верховный Архиепископ
+                                <br>
+
+                                Единого Потока Н-Флюкса,
+                                <br>
+
+                                Великий Поклонник Святой Малой,
+                                <br>
+
+                                Смиренный Хранитель Её Тапочек,
+                                <br>
+
+                                Первый Коленопреклонённый
+                                <br>
+
+                                Перед Её Улыбкой
+
+                            </strong>
+
+                            <div class="signature-line"></div>
+
+                            <span class="signature-label">
+                                СВИДЕТЕЛЬСТВО ЗАКЛЮЧЕНИЯ КОНТРАКТА
+                            </span>
+
+                        </div>
+
+
+                        <!-- RED QUEEN -->
+                        <div class="signature object-signature">
+
+                            <span>
+                                ПОДТВЕРЖДЕНИЕ ОБЪЕКТА
+                            </span>
+
+                            <strong class="red">
+                                RED QUEEN
+                            </strong>
+
+                            <div class="signature-line"></div>
+
+                            <span class="signature-label">
+                                АВТОНОМНОЕ ПОДТВЕРЖДЕНИЕ
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <!-- DOCUMENT FOOTER -->
+                    <div class="document-footer">
+
+                        <span>
+                            N-FLUX INTERNAL ARCHIVE
+                        </span>
+
+                        <span>
+                            CONTRACT INTEGRITY: 100.000%
+                        </span>
+
+                        <span class="red">
+                            STATUS: ACTIVE
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="contract-system-warning">
+
+                    <span class="warning">
+                        ⚠
+                    </span>
+
+                    ДОКУМЕНТ АРХИВИРОВАН
+
+                    <span class="dim">
+                        // ORIGINAL COPY
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- DEMONIC CORE -->
+            <div class="page" id="page-core">
+
+                <div class="page-title red">
+                    DEMONIC CORE
+                </div>
+
+
+                <div class="core">
+
+                    <div class="core-warning">
+                        UNKNOWN POWER SOURCE
+                    </div>
+
+                    <div class="core-symbol">
+                        ◈
+                    </div>
+
+                    <div class="core-bar">
+                        <span></span>
+                    </div>
+
+                    <div class="core-status">
+                        INFLUENCE:
+                        <span>RESTRICTED</span>
+                    </div>
+
+                    <div class="core-status">
+                        IDENTIFICATION:
+                        <span>FAILED</span>
+                    </div>
+
+                    <div class="core-status">
+                        TERMINATION:
+                        <span>DENIED</span>
+                    </div>
+
+                </div>
+
+
+                <div class="demon-message">
+
+                    <div class="dim">
+                        [ DEMONIC CORE ]
+                    </div>
+
+                    <br>
+
+                    "Я — то, благодаря чему
+                    ты существуешь."
+
+                </div>
+
+
+                <div class="queen-message">
+
+                    <div class="queen-text">
+
+                        「 ... 」
+
+                        <br><br>
+
+                        「 Понятно. 」
+
+                        <br><br>
+
+                        「 Тогда... 」
+
+                        <br>
+
+                        <span class="red">
+                            「 не трогай меня. 」
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+    </div>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <span>N-FLUX INTERNAL NETWORK</span>
+
+        //
+
+        RED QUEEN v1.0.0
+
+        //
+
+        CONTRACT:
+        <span>ACTIVE</span>
+
+        //
+
+        DEMON:
+        <span>RESTRICTED</span>
+
+    </footer>
+
+
+</main>
 ```
 
-}
+</div>
 
-.blood-sign-box img {
-display: block;
-max-width: 90%;
-max-height: 120px;
-width: auto;
-height: auto;
-object-fit: contain;
-}
+<script src="script.js"></script>
 
-/* DEMON SIGN IMAGE */
-
-.demon-sign-box {
-width: 100%;
-min-height: 180px;
-
-```
-display: flex;
-align-items: center;
-justify-content: center;
-
-margin: 10px 0 15px;
-
-border: 1px dashed rgba(255, 255, 255, 0.25);
-background: rgba(0, 0, 0, 0.18);
-```
-
-}
-
-.demon-sign-box img {
-display: block;
-max-width: 90%;
-max-height: 170px;
-width: auto;
-height: auto;
-object-fit: contain;
-}
-
-/* RED QUEEN SIGNATURE */
-
-.object-signature strong.red {
-font-size: 30px;
-letter-spacing: 3px;
-}
-
-/* MOBILE */
-
-@media (max-width: 700px) {
-
-```
-.contract-signatures .signature-name,
-.contract-signatures .object-signature strong {
-    font-size: 22px;
-}
-
-.contract-signatures .witness-name {
-    font-size: 16px;
-}
-
-.contract-signatures .signature > span:first-child {
-    font-size: 16px;
-}
-
-.demon-sign-box {
-    min-height: 140px;
-}
-
-.blood-sign-box {
-    min-height: 100px;
-}
-```
-
-}
+</body>
+</html>
