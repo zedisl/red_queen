@@ -1493,3 +1493,502 @@ footer span {
     }
 
 }
+
+/* =========================================================
+   RED QUEEN // TERMINAL UPGRADE
+   ========================================================= */
+
+.terminal-window {
+    position: relative;
+    overflow: hidden;
+
+    min-height: 520px;
+
+    background:
+        radial-gradient(
+            ellipse at 50% 0%,
+            rgba(120, 0, 0, 0.16),
+            transparent 55%
+        ),
+        linear-gradient(
+            180deg,
+            rgba(12, 3, 4, 0.98),
+            rgba(3, 1, 2, 0.99)
+        );
+
+    border: 1px solid rgba(255, 25, 25, 0.38);
+
+    box-shadow:
+        0 0 0 1px rgba(255, 0, 0, 0.04),
+        0 0 25px rgba(150, 0, 0, 0.15),
+        inset 0 0 40px rgba(120, 0, 0, 0.08);
+
+    isolation: isolate;
+}
+
+
+/* =========================================================
+   TERMINAL TOP BAR
+   ========================================================= */
+
+.terminal-bar {
+    position: relative;
+
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 14px;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(90, 0, 0, 0.28),
+            rgba(25, 0, 0, 0.22)
+        );
+
+    border-bottom: 1px solid rgba(255, 30, 30, 0.25);
+
+    color: rgba(255, 90, 90, 0.8);
+
+    font-size: 10px;
+    letter-spacing: 2px;
+
+    text-shadow:
+        0 0 8px rgba(255, 0, 0, 0.45);
+}
+
+
+/* =========================================================
+   TERMINAL BUTTONS
+   ========================================================= */
+
+.terminal-buttons {
+    display: flex;
+
+    gap: 6px;
+
+    margin-right: 14px;
+}
+
+.terminal-buttons i {
+    display: block;
+
+    width: 7px;
+    height: 7px;
+
+    border: 1px solid rgba(255, 40, 40, 0.5);
+
+    background: rgba(255, 0, 0, 0.08);
+
+    box-shadow:
+        0 0 5px rgba(255, 0, 0, 0.25);
+}
+
+.terminal-buttons i:first-child {
+    background: rgba(255, 30, 30, 0.45);
+}
+
+
+/* =========================================================
+   SESSION ID
+   ========================================================= */
+
+.terminal-id {
+    margin-left: auto;
+
+    opacity: 0.35;
+
+    font-size: 8px;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   TERMINAL OUTPUT
+   ========================================================= */
+
+.terminal-output {
+    position: relative;
+
+    height: 420px;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    padding: 22px 24px;
+
+    box-sizing: border-box;
+
+    color: rgba(235, 225, 225, 0.88);
+
+    font-family:
+        "Courier New",
+        "Noto Sans Mono",
+        monospace;
+
+    font-size: 13px;
+
+    line-height: 1.65;
+
+    letter-spacing: 0.25px;
+
+    scrollbar-width: thin;
+
+    scrollbar-color:
+        rgba(255, 25, 25, 0.35)
+        transparent;
+}
+
+
+/* Chrome / Edge / Safari */
+
+.terminal-output::-webkit-scrollbar {
+    width: 5px;
+}
+
+.terminal-output::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.terminal-output::-webkit-scrollbar-thumb {
+    background:
+        rgba(255, 25, 25, 0.35);
+
+    box-shadow:
+        0 0 8px rgba(255, 0, 0, 0.4);
+}
+
+
+/* =========================================================
+   TERMINAL LINES
+   ========================================================= */
+
+.terminal-output > div {
+    position: relative;
+
+    transition:
+        text-shadow 0.2s ease,
+        opacity 0.2s ease;
+}
+
+
+/* Hovering over old terminal messages */
+
+.terminal-output > div:hover {
+    text-shadow:
+        0 0 8px rgba(255, 30, 30, 0.45);
+}
+
+
+/* =========================================================
+   SYSTEM LINE
+   ========================================================= */
+
+.system-line {
+    color: #ff3030;
+
+    letter-spacing: 2px;
+
+    text-shadow:
+        0 0 5px rgba(255, 0, 0, 0.8),
+        0 0 15px rgba(255, 0, 0, 0.3);
+}
+
+
+/* =========================================================
+   PROMPT
+   ========================================================= */
+
+.prompt {
+    color: #ff2929;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    text-shadow:
+        0 0 5px rgba(255, 0, 0, 0.9),
+        0 0 12px rgba(255, 0, 0, 0.35);
+}
+
+
+/* =========================================================
+   COMMAND LINE
+   ========================================================= */
+
+.command-line {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    min-height: 52px;
+
+    padding:
+        0 24px;
+
+    border-top:
+        1px solid rgba(255, 25, 25, 0.18);
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(70, 0, 0, 0.12),
+            rgba(10, 0, 0, 0.35)
+        );
+}
+
+
+/* tiny red indicator */
+
+.command-line::before {
+    content: "";
+
+    width: 5px;
+    height: 5px;
+
+    margin-right: 10px;
+
+    background: #ff2525;
+
+    box-shadow:
+        0 0 6px #ff0000,
+        0 0 14px rgba(255, 0, 0, 0.5);
+
+    animation:
+        terminalStatusPulse 1.4s infinite;
+}
+
+
+/* =========================================================
+   INPUT
+   ========================================================= */
+
+#command-input {
+    flex: 1;
+
+    width: 100%;
+
+    margin-left: 10px;
+
+    padding: 0;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    color: #f2dddd;
+
+    font-family:
+        "Courier New",
+        "Noto Sans Mono",
+        monospace;
+
+    font-size: 13px;
+
+    letter-spacing: 0.5px;
+
+    caret-color: #ff2020;
+
+    text-shadow:
+        0 0 6px rgba(255, 0, 0, 0.3);
+}
+
+
+/* placeholder */
+
+#command-input::placeholder {
+    color: rgba(255, 100, 100, 0.2);
+}
+
+
+/* =========================================================
+   CURSOR
+   ========================================================= */
+
+.cursor {
+    color: #ff2222;
+
+    margin-left: 2px;
+
+    text-shadow:
+        0 0 6px #ff0000,
+        0 0 14px rgba(255, 0, 0, 0.5);
+
+    animation:
+        terminalCursorBlink 0.9s steps(1) infinite;
+}
+
+
+/* =========================================================
+   CRT SCANLINES — ONLY INSIDE TERMINAL
+   ========================================================= */
+
+.terminal-window::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 38px 0 52px 0;
+
+    z-index: 5;
+
+    pointer-events: none;
+
+    background:
+        repeating-linear-gradient(
+            to bottom,
+            rgba(255, 255, 255, 0.018) 0px,
+            rgba(255, 255, 255, 0.018) 1px,
+            transparent 1px,
+            transparent 4px
+        );
+
+    opacity: 0.5;
+}
+
+
+/* =========================================================
+   MOVING SCAN BAR
+   ========================================================= */
+
+.terminal-window::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+
+    top: -20%;
+
+    height: 80px;
+
+    z-index: 6;
+
+    pointer-events: none;
+
+    background:
+        linear-gradient(
+            to bottom,
+            transparent,
+            rgba(255, 0, 0, 0.035),
+            rgba(255, 0, 0, 0.08),
+            transparent
+        );
+
+    animation:
+        terminalScan 7s linear infinite;
+}
+
+
+/* =========================================================
+   RED QUEEN GLITCH
+   ========================================================= */
+
+.terminal-window:hover {
+    border-color:
+        rgba(255, 35, 35, 0.55);
+
+    box-shadow:
+        0 0 0 1px rgba(255, 0, 0, 0.06),
+        0 0 30px rgba(160, 0, 0, 0.22),
+        inset 0 0 50px rgba(120, 0, 0, 0.1);
+}
+
+
+/* =========================================================
+   ANIMATIONS
+   ========================================================= */
+
+@keyframes terminalCursorBlink {
+
+    0%,
+    45% {
+        opacity: 1;
+    }
+
+    46%,
+    100% {
+        opacity: 0;
+    }
+
+}
+
+
+@keyframes terminalStatusPulse {
+
+    0%,
+    100% {
+        opacity: 0.35;
+        transform: scale(0.8);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.15);
+    }
+
+}
+
+
+@keyframes terminalScan {
+
+    0% {
+        transform: translateY(-120%);
+    }
+
+    100% {
+        transform: translateY(500%);
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .terminal-window {
+        min-height: 450px;
+    }
+
+    .terminal-output {
+        height: 350px;
+
+        padding:
+            18px 15px;
+
+        font-size: 11px;
+
+        line-height: 1.55;
+    }
+
+    .terminal-bar {
+        padding: 0 10px;
+
+        font-size: 8px;
+
+        letter-spacing: 1px;
+    }
+
+    .terminal-id {
+        display: none;
+    }
+
+    .command-line {
+        padding:
+            0 15px;
+    }
+
+    #command-input {
+        font-size: 12px;
+    }
+
+}
