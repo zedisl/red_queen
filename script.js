@@ -914,7 +914,13 @@ const bootSequence = [
    BOOT ENGINE
    ========================================================= */
 
+/* =========================================================
+BOOT ENGINE
+========================================================= */
+
 let bootIndex = 0;
+let bootPaused = false;
+let bootPauseShown = false;
 
 function bootNext() {
 
@@ -944,6 +950,27 @@ function bootNext() {
         return;
     }
 
+    /*
+     * ПАУЗА ПОСЛЕ ПЕРВОГО BOOT-БЛОКА
+     *
+     * Останавливаемся сразу после:
+     *
+     * DEMONIC CORE..................... [ WARNING ]
+     */
+
+    if (
+        !bootPauseShown &&
+        bootSequence[bootIndex].text === "[ POST-BOOT DIAGNOSTICS ]"
+    ) {
+
+        bootPaused = true;
+        bootPauseShown = true;
+
+        showBootPause();
+
+        return;
+    }
+
     const item = bootSequence[bootIndex];
 
     const line = document.createElement("div");
@@ -965,6 +992,94 @@ function bootNext() {
 
     setTimeout(bootNext, delay);
 }
+
+
+/* =========================================================
+BOOT PAUSE
+========================================================= */
+
+function showBootPause() {
+
+    const pause = document.createElement("div");
+
+    pause.id = "boot-pause";
+
+    pause.innerHTML = `
+        <div class="boot-pause-content">
+
+            <div class="boot-pause-line">
+                <span class="pause-symbol">█</span>
+                SYSTEM PAUSED
+            </div>
+
+            <div class="boot-pause-text">
+                PRESS ANY KEY TO CONTINUE
+            </div>
+
+            <div class="boot-pause-subtext">
+                нажмите любую клавишу...
+            </div>
+
+        </div>
+    `;
+
+    bootScreen.appendChild(pause);
+
+    const continueBoot = () => {
+
+        if (!bootPaused) {
+            return;
+        }
+
+        bootPaused = false;
+
+        pause.classList.add("boot-pause-exit");
+
+        setTimeout(() => {
+
+            pause.remove();
+
+            /*
+             * Теперь продолжаем именно с
+             * [ POST-BOOT DIAGNOSTICS ]
+             */
+
+            bootNext();
+
+        }, 450);
+
+        document.removeEventListener(
+            "keydown",
+            continueBoot
+        );
+
+        document.removeEventListener(
+            "click",
+            continueBoot
+        );
+
+        document.removeEventListener(
+            "touchstart",
+            continueBoot
+        );
+    };
+
+    document.addEventListener(
+        "keydown",
+        continueBoot
+    );
+
+    document.addEventListener(
+        "click",
+        continueBoot
+    );
+
+    document.addEventListener(
+        "touchstart",
+        continueBoot
+    );
+}
+
 
 setTimeout(bootNext, 500);
 
