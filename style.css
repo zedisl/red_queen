@@ -3140,3 +3140,112 @@ body.rq-glitch {
 
 }
 ```
+```css
+/* =========================================
+   CONTRACT SIGNATURES
+   ========================================= */
+
+.contract-signatures {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px;
+    margin-top: 45px;
+    padding-top: 35px;
+    border-top: 1px solid rgba(120, 120, 120, 0.35);
+}
+
+.contract-signatures .signature {
+    min-height: 170px;
+    padding: 22px;
+    border: 1px solid rgba(120, 120, 120, 0.28);
+    background: rgba(0, 0, 0, 0.025);
+}
+
+.contract-signatures .signature > span:first-child {
+    display: block;
+    margin-bottom: 18px;
+    font-size: 11px;
+    letter-spacing: 2px;
+    opacity: 0.65;
+}
+
+.signature-name {
+    display: block;
+    font-size: 26px;
+    font-weight: normal;
+    margin: 25px 0 18px;
+}
+
+.signature-label {
+    display: block;
+    margin-top: 10px;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    opacity: 0.45;
+}
+
+.blood-line {
+    display: block;
+    margin: 28px 0 20px;
+    font-size: 17px;
+    letter-spacing: 2px;
+}
+
+.demon-signature {
+    min-height: 280px !important;
+}
+
+.demon-sign-box {
+    width: 100%;
+    height: 170px;
+    margin: 15px 0 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px dashed rgba(120, 120, 120, 0.45);
+    background:
+        repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 5px,
+            rgba(120, 120, 120, 0.035) 6px
+        );
+    overflow: hidden;
+}
+
+.demon-sign-box img {
+    max-width: 90%;
+    max-height: 150px;
+    object-fit: contain;
+    filter: grayscale(1) contrast(1.15);
+}
+
+.witness-signature {
+    min-height: 230px !important;
+}
+
+.witness-name {
+    display: block;
+    margin: 18px 0 25px;
+    font-size: 14px;
+    line-height: 1.65;
+    font-weight: normal;
+}
+
+.object-signature {
+    min-height: 170px;
+}
+
+.object-signature strong {
+    display: block;
+    margin: 30px 0 25px;
+    font-size: 22px;
+    letter-spacing: 2px;
+}
+
+@media (max-width: 800px) {
+    .contract-signatures {
+        grid-template-columns: 1fr;
+    }
+}
+```
