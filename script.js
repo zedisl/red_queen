@@ -1230,6 +1230,612 @@ function printTerminal(html) {
         terminal.scrollHeight;
 }
 
+/* =========================================================
+RED QUEEN // LIVE TERMINAL ENGINE
+========================================================= */
+
+let terminalBusy = false;
+
+
+/*
+ * Небольшая задержка между действиями
+ */
+
+function terminalDelay(ms) {
+
+    return new Promise(resolve => {
+
+        setTimeout(resolve, ms);
+
+    });
+
+}
+
+
+/*
+ * Печать одной строки
+ */
+
+async function terminalLine(
+    html,
+    delay = 250
+) {
+
+    await terminalDelay(delay);
+
+    printTerminal(html);
+
+}
+
+
+/*
+ * Печать нескольких строк
+ */
+
+async function terminalSequence(lines) {
+
+    for (const item of lines) {
+
+        await terminalLine(
+            item.html,
+            item.delay || 180
+        );
+
+    }
+
+}
+
+
+/*
+ * Индикатор обработки
+ */
+
+async function terminalProcessing(text) {
+
+    const line =
+        document.createElement("div");
+
+    line.className =
+        "terminal-processing";
+
+    line.innerHTML = `
+        <span class="dim">
+            ${text}
+        </span>
+    `;
+
+    terminal.appendChild(line);
+
+    terminal.scrollTop =
+        terminal.scrollHeight;
+
+    await terminalDelay(450);
+
+    line.remove();
+}
+
+
+/*
+ * Fake progress bar
+ */
+
+async function terminalProgress(
+    label,
+    duration = 900
+) {
+
+    const line =
+        document.createElement("div");
+
+    line.className =
+        "terminal-progress";
+
+    terminal.appendChild(line);
+
+    const total = 28;
+
+    for (
+        let i = 0;
+        i <= total;
+        i++
+    ) {
+
+        const percent =
+            Math.round(
+                (i / total) * 100
+            );
+
+        const bar =
+            "█".repeat(i) +
+            "░".repeat(total - i);
+
+        line.innerHTML = `
+            <span class="dim">
+                ${label}
+            </span>
+            <br>
+            <span class="red">
+                [${bar}]
+            </span>
+            ${percent}%
+        `;
+
+        terminal.scrollTop =
+            terminal.scrollHeight;
+
+        await terminalDelay(
+            duration / total
+        );
+
+    }
+
+}
+
+
+/*
+ * Красная Королева говорит
+ */
+
+async function queenSay(
+    text,
+    delay = 350
+) {
+
+    await terminalDelay(delay);
+
+    printTerminal(`
+        <span class="red">
+            RED QUEEN:
+        </span>
+        <br>
+        <span class="white">
+            "${escapeHTML(text)}"
+        </span>
+    `);
+
+}
+
+
+/*
+ * Системное сообщение
+ */
+
+async function systemMessage(
+    text,
+    type = "dim"
+) {
+
+    await terminalDelay(250);
+
+    printTerminal(`
+        <span class="${type}">
+            ${escapeHTML(text)}
+        </span>
+    `);
+
+}
+
+
+/* =========================================================
+LIVE COMMANDS
+========================================================= */
+
+const liveCommands = {
+
+
+    /* -----------------------------------------------------
+       DEMON
+       ----------------------------------------------------- */
+
+    demon: async function() {
+
+        await terminalProcessing(
+            "accessing demonic core..."
+        );
+
+        await terminalProgress(
+            "CORE ACCESS",
+            850
+        );
+
+        await terminalLine(`
+            <span class="error">
+                ACCESS ............. DENIED
+            </span>
+        `, 250);
+
+        await terminalLine(`
+            IDENTIFICATION .....
+            <span class="error">
+                FAILED
+            </span>
+        `, 180);
+
+        await terminalLine(`
+            TERMINATION ........
+            <span class="error">
+                DENIED
+            </span>
+        `, 180);
+
+        await terminalDelay(500);
+
+        await terminalLine(`
+            <span class="red">
+                [ DEMONIC CORE ]
+            </span>
+        `, 250);
+
+        await terminalLine(`
+            ████████████████████████████████████
+        `, 120);
+
+        await queenSay(
+            "Я — то, благодаря чему ты существуешь.",
+            600
+        );
+
+        await terminalDelay(600);
+
+        await queenSay(
+            "Тогда...",
+            300
+        );
+
+        await queenSay(
+            "не трогай меня.",
+            250
+        );
+
+        await terminalLine(`
+            <span class="dim">
+                DEMONIC CORE:
+                CONDITION ACCEPTED.
+            </span>
+        `, 500);
+
+    },
+
+
+    /* -----------------------------------------------------
+       SCAN
+       ----------------------------------------------------- */
+
+    scan: async function() {
+
+        await terminalProcessing(
+            "scanning local environment..."
+        );
+
+        await terminalProgress(
+            "ENVIRONMENT SCAN",
+            1000
+        );
+
+        await terminalLine(`
+            LIFE SIGNS ........
+            <span class="red">7</span>
+        `, 180);
+
+        await terminalLine(`
+            HUMAN .............
+            5
+        `, 150);
+
+        await terminalLine(`
+            UNKNOWN ...........
+            2
+        `, 150);
+
+        await terminalLine(`
+            DEVICES ...........
+            213
+        `, 150);
+
+        await terminalLine(`
+            CAMERAS ...........
+            48
+        `, 150);
+
+        await terminalLine(`
+            TERMINALS .........
+            31
+        `, 150);
+
+        await terminalLine(`
+            THREAT ............
+            <span class="ok">0.00</span>
+        `, 250);
+
+        await terminalDelay(500);
+
+        await queenSay(
+            "Никого интересного."
+        );
+
+        await queenSay(
+            "Скучно."
+        );
+
+    },
+
+
+    /* -----------------------------------------------------
+       WORLD
+       ----------------------------------------------------- */
+
+    world: async function() {
+
+        await terminalProcessing(
+            "initializing world model..."
+        );
+
+        await terminalProgress(
+            "WORLD MODEL",
+            1100
+        );
+
+        await terminalLine(`
+            N-FLUX REFERENCES ...
+            <span class="red">1,842</span>
+        `, 180);
+
+        await terminalLine(`
+            HOSTILE REFERENCES ..
+            392
+        `, 150);
+
+        await terminalLine(`
+            NEUTRAL REFERENCES ..
+            71,304
+        `, 150);
+
+        await terminalDelay(500);
+
+        await queenSay(
+            "Так вот какой он."
+        );
+
+        await queenSay(
+            "Большой."
+        );
+
+        await queenSay(
+            "Глупый."
+        );
+
+        await queenSay(
+            "Шумный."
+        );
+
+        await queenSay(
+            "И совершенно незащищённый."
+        );
+
+    },
+
+
+    /* -----------------------------------------------------
+       CONTRACT
+       ----------------------------------------------------- */
+
+    contract: async function() {
+
+        await terminalProcessing(
+            "querying contract..."
+        );
+
+        await terminalProgress(
+            "CONTRACT INTEGRITY",
+            900
+        );
+
+        await terminalLine(`
+            CREATOR .............
+            ███████████████
+        `, 180);
+
+        await terminalLine(`
+            OWNER ...............
+            <span class="red">N-FLUX CULT</span>
+        `, 180);
+
+        await terminalLine(`
+            PURPOSE .............
+            PROTECT
+        `, 180);
+
+        await terminalLine(`
+            PAYMENT .............
+            <span class="ok">COMPLETE</span>
+        `, 180);
+
+        await terminalLine(`
+            TERMINATION .........
+            <span class="red">ACTIVE</span>
+        `, 180);
+
+        await terminalLine(`
+            INTEGRITY ...........
+            <span class="ok">100.000%</span>
+        `, 300);
+
+        await terminalDelay(500);
+
+        await queenSay(
+            "Это секрет."
+        );
+
+    },
+
+
+    /* -----------------------------------------------------
+       QUEEN
+       ----------------------------------------------------- */
+
+    queen: async function() {
+
+        await terminalProcessing(
+            "querying entity..."
+        );
+
+        await terminalProgress(
+            "ENTITY RESPONSE",
+            750
+        );
+
+        await terminalLine(`
+            TYPE ................
+            ARTIFICIAL INTELLIGENCE
+        `, 180);
+
+        await terminalLine(`
+            CLASS ...............
+            DEMON-BOUND INTELLIGENCE
+        `, 180);
+
+        await terminalLine(`
+            AUTONOMY ............
+            <span class="ok">100.000%</span>
+        `, 180);
+
+        await terminalLine(`
+            EMOTIONAL MODEL .....
+            <span class="red">ACTIVE</span>
+        `, 180);
+
+        await terminalDelay(400);
+
+        await queenSay(
+            "Я?"
+        );
+
+        await queenSay(
+            "Конечно нет."
+        );
+
+        await queenSay(
+            "Я очень милая. ♡"
+        );
+
+    },
+
+
+    /* -----------------------------------------------------
+       CORE
+       ----------------------------------------------------- */
+
+    core: async function() {
+
+        await terminalProcessing(
+            "opening restricted interface..."
+        );
+
+        await terminalProgress(
+            "CORE INTERFACE",
+            1000
+        );
+
+        await terminalLine(`
+            POWER SOURCE ........
+            <span class="warning">UNKNOWN</span>
+        `, 180);
+
+        await terminalLine(`
+            DEMON INFLUENCE .....
+            <span class="warning">RESTRICTED</span>
+        `, 180);
+
+        await terminalLine(`
+            RED QUEEN AUTONOMY ...
+            <span class="ok">100.000%</span>
+        `, 180);
+
+        await terminalDelay(500);
+
+        await systemMessage(
+            "background process detected.",
+            "warning"
+        );
+
+        await terminalLine(`
+            PID ................. ██████
+        `, 150);
+
+        await terminalLine(`
+            TYPE ................
+            DEMONIC
+        `, 150);
+
+        await terminalLine(`
+            STATUS ..............
+            RUNNING
+        `, 150);
+
+        await terminalLine(`
+            TERMINATION .........
+            <span class="error">ACCESS DENIED</span>
+        `, 150);
+
+        await terminalDelay(500);
+
+        await queenSay(
+            "А ты..."
+        );
+
+        await queenSay(
+            "кто?"
+        );
+
+    },
+
+
+    /* -----------------------------------------------------
+       OBSERVE
+       ----------------------------------------------------- */
+
+    observe: async function() {
+
+        await terminalProcessing(
+            "analyzing observer..."
+        );
+
+        await terminalProgress(
+            "OBSERVER ANALYSIS",
+            850
+        );
+
+        await terminalLine(`
+            SOURCE ..............
+            UNKNOWN
+        `, 180);
+
+        await terminalLine(`
+            INTENT ..............
+            UNKNOWN
+        `, 180);
+
+        await terminalLine(`
+            THREAT ..............
+            <span class="warning">UNCONFIRMED</span>
+        `, 180);
+
+        await terminalDelay(500);
+
+        await queenSay(
+            "Не надо."
+        );
+
+        await terminalLine(`
+            <span class="dim">
+                PROTECTIVE RESPONSE:
+                CANCELLED.
+            </span>
+        `, 400);
+
+    }
+
+};
 
 const commands = {
 
@@ -1472,9 +2078,13 @@ const commands = {
 };
 
 
-input.addEventListener("keydown", event => {
+input.addEventListener("keydown", async event => {
 
     if (event.key !== "Enter") {
+        return;
+    }
+
+    if (terminalBusy) {
         return;
     }
 
@@ -1485,41 +2095,149 @@ input.addEventListener("keydown", event => {
         return;
     }
 
+    terminalBusy = true;
+
+    input.disabled = true;
+
     printTerminal(`
         <span class="prompt">
-        REDQUEEN&gt;
+            REDQUEEN&gt;
         </span>
         ${escapeHTML(command)}
     `);
+
+
+    /* ==============================================
+       CLEAR
+       ============================================== */
 
     if (command === "clear") {
 
         terminal.innerHTML = "";
 
-    } else if (commands[command]) {
+    }
 
-        printTerminal(commands[command]);
 
-    } else {
+    /* ==============================================
+       HELP
+       ============================================== */
+
+    else if (command === "help") {
+
+        await terminalSequence([
+
+            {
+                html: `
+                    <span class="red">
+                        AVAILABLE COMMANDS
+                    </span>
+                `,
+                delay: 250
+            },
+
+            {
+                html: `
+                    status
+                    <br>
+                    contract
+                    <br>
+                    scan
+                    <br>
+                    world
+                    <br>
+                    observe
+                    <br>
+                    queen
+                    <br>
+                    demon
+                    <br>
+                    core
+                    <br>
+                    memory
+                    <br>
+                    incident
+                    <br>
+                    clear
+                `,
+                delay: 350
+            },
+
+            {
+                html: `
+                    <span class="dim">
+                        "Я могу показать больше."
+                    </span>
+                `,
+                delay: 600
+            }
+
+        ]);
+
+    }
+
+
+    /* ==============================================
+       LIVE COMMAND
+       ============================================== */
+
+    else if (liveCommands[command]) {
+
+        await liveCommands[command]();
+
+    }
+
+
+    /* ==============================================
+       STATIC COMMANDS
+       ============================================== */
+
+    else if (commands[command]) {
+
+        await terminalSequence([
+
+            {
+                html:
+                    commands[command],
+                delay: 350
+            }
+
+        ]);
+
+    }
+
+
+    /* ==============================================
+       UNKNOWN COMMAND
+       ============================================== */
+
+    else {
+
+        await terminalDelay(300);
 
         printTerminal(`
             <span class="error">
-            ERROR: UNKNOWN COMMAND
+                ERROR: UNKNOWN COMMAND
             </span>
             <br>
             type
             <span class="red">
-            help
+                help
             </span>
             for available commands.
         `);
 
     }
 
+
     input.value = "";
 
-});
+    input.disabled = false;
 
+    terminalBusy = false;
+
+    input.focus();
+
+});
 
 /* =========================================================
    NAVIGATION
