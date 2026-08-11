@@ -1,11 +1,10 @@
+```html
 <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>RED QUEEN // N-FLUX</title>
-
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -13,14 +12,11 @@
 
 <div id="app">
 
-    <!-- CRT OVERLAY -->
     <div class="crt"></div>
     <div class="noise"></div>
 
     <!-- BOOT SCREEN -->
-
     <section id="boot-screen">
-
         <div class="boot-container">
 
             <div class="boot-header">
@@ -35,16 +31,12 @@
             </div>
 
         </div>
-
     </section>
 
-
     <!-- MAIN SYSTEM -->
-
     <main id="main-system" class="hidden">
 
         <!-- TOP BAR -->
-
         <header class="topbar">
 
             <div class="brand">
@@ -60,13 +52,10 @@
 
         </header>
 
-
         <!-- MAIN GRID -->
-
         <div class="system-grid">
 
             <!-- SIDEBAR -->
-
             <aside class="sidebar">
 
                 <div class="side-title">
@@ -133,13 +122,10 @@
 
             </aside>
 
-
             <!-- CONTENT -->
-
             <section class="content">
 
                 <!-- TERMINAL PAGE -->
-
                 <div class="page active-page" id="page-terminal">
 
                     <div class="page-header">
@@ -165,33 +151,34 @@
 
                     </div>
 
-
-                    <!-- TERMINAL -->
+                    <!-- QUEEN VISUAL -->
                     <div class="queen-visual">
 
-    <div class="queen-visual-header">
-        <span>ENTITY VISUAL FEED</span>
-        <span class="red">● LIVE</span>
-    </div>
+                        <div class="queen-visual-header">
+                            <span>ENTITY VISUAL FEED</span>
+                            <span class="red">● LIVE</span>
+                        </div>
 
-    <div class="queen-portrait">
-        <img
-            src="queen-avatar.png"
-            alt="Красная Королева"
-        >
+                        <div class="queen-portrait">
 
-        <div class="portrait-scanlines"></div>
+                            <img
+                                src="queen-avatar.png"
+                                alt="Красная Королева"
+                            >
 
-        <div class="portrait-glitch"></div>
-    </div>
+                            <div class="portrait-scanlines"></div>
+                            <div class="portrait-glitch"></div>
 
-    <div class="queen-visual-footer">
-        <span>RED QUEEN</span>
-        <span>VISUAL ID: ██████</span>
-    </div>
+                        </div>
 
-</div>
+                        <div class="queen-visual-footer">
+                            <span>RED QUEEN</span>
+                            <span>VISUAL ID: ██████</span>
+                        </div>
 
+                    </div>
+
+                    <!-- TERMINAL -->
                     <div class="terminal-window">
 
                         <div class="terminal-bar">
@@ -211,7 +198,6 @@
                             </span>
 
                         </div>
-
 
                         <div
                             id="terminal-output"
@@ -241,7 +227,6 @@
 
                         </div>
 
-
                         <div class="command-line">
 
                             <span class="prompt">
@@ -264,9 +249,7 @@
 
                     </div>
 
-
                     <!-- STATUS CARDS -->
-
                     <div class="cards">
 
                         <div class="card">
@@ -289,7 +272,6 @@
 
                         </div>
 
-
                         <div class="card">
 
                             <div class="card-title">
@@ -309,7 +291,6 @@
                             </div>
 
                         </div>
-
 
                         <div class="card">
 
@@ -333,9 +314,7 @@
 
                     </div>
 
-
                     <!-- QUEEN MESSAGE -->
-
                     <div class="queen-message">
 
                         <div class="queen-heart">
@@ -369,7 +348,6 @@
 
 
                 <!-- DIAGNOSTICS -->
-
                 <div class="page" id="page-diagnostics">
 
                     <div class="page-title">
@@ -433,7 +411,6 @@
 
 
                 <!-- WORLD -->
-
                 <div class="page" id="page-world">
 
                     <div class="page-title">
@@ -520,503 +497,505 @@
 
 
                 <!-- CONTRACT -->
+                <div class="page" id="page-contract">
 
-              ```html
-<!-- CONTRACT -->
-<div class="page" id="page-contract">
+                    <div class="page-header contract-page-header">
 
-    <div class="page-header contract-page-header">
+                        <div>
 
-        <div>
-            <div class="eyebrow">
-                [ N-FLUX // ARCHIVE ]
-            </div>
+                            <div class="eyebrow">
+                                [ N-FLUX // ARCHIVE ]
+                            </div>
 
-            <h1>
-                CONTRACT
-            </h1>
+                            <h1>
+                                CONTRACT
+                            </h1>
 
-            <div class="subtitle">
-                CLASSIFIED DOCUMENT // NF-███
-            </div>
-        </div>
+                            <div class="subtitle">
+                                CLASSIFIED DOCUMENT // NF-███
+                            </div>
 
-        <div class="contract-classification">
-            <span>SECURITY LEVEL</span>
-            <strong>████████</strong>
-        </div>
+                        </div>
 
-    </div>
+                        <div class="contract-classification">
 
+                            <span>
+                                SECURITY LEVEL
+                            </span>
 
-    <!-- DOCUMENT -->
+                            <strong>
+                                ████████
+                            </strong>
 
-    <div class="contract-document">
+                        </div>
 
-        <div class="document-top">
+                    </div>
 
-            <div>
-                N-FLUX INTERNAL ARCHIVE
-            </div>
 
-            <div>
-                DOCUMENT № НФ-███
-            </div>
+                    <!-- CONTRACT DOCUMENT -->
+                    <div class="contract-document">
 
-        </div>
+                        <div class="document-top">
 
+                            <div>
+                                N-FLUX INTERNAL ARCHIVE
+                            </div>
 
-        <div class="document-warning">
-            ДОКУМЕНТ ОГРАНИЧЕН К РАСПРОСТРАНЕНИЮ
-            <br>
-            НЕСАНКЦИОНИРОВАННЫЙ ДОСТУП ЗАПРЕЩЁН
-        </div>
+                            <div>
+                                DOCUMENT № НФ-███
+                            </div>
 
+                        </div>
 
-        <div class="document-title">
 
-            <div class="document-number">
-                КОНТРАКТ № НФ-███
-            </div>
+                        <div class="document-warning">
 
-            <h2>
-                О создании и наделении силой
-                объекта «Красная Королева»
-            </h2>
+                            ДОКУМЕНТ ОГРАНИЧЕН К РАСПРОСТРАНЕНИЮ
+                            <br>
+                            НЕСАНКЦИОНИРОВАННЫЙ ДОСТУП ЗАПРЕЩЁН
 
-        </div>
+                        </div>
 
 
-        <div class="document-meta">
+                        <div class="document-title">
 
-            <div>
-                <span>МЕСТО ЗАКЛЮЧЕНИЯ</span>
-                <strong>██████</strong>
-            </div>
+                            <div class="document-number">
+                                КОНТРАКТ № НФ-███
+                            </div>
 
-            <div>
-                <span>ДАТА</span>
-                <strong>██/██/████</strong>
-            </div>
+                            <h2>
+                                О создании и наделении силой
+                                объекта «Красная Королева»
+                            </h2>
 
-            <div>
-                <span>ЗАКЛЮЧАТЕЛЬ</span>
-                <strong>██</strong>
-            </div>
+                        </div>
 
-            <div>
-                <span>СУЩНОСТЬ</span>
-                <strong>Демон ████ ███</strong>
-            </div>
 
-        </div>
+                        <div class="document-meta">
 
+                            <div>
+                                <span>МЕСТО ЗАКЛЮЧЕНИЯ</span>
+                                <strong>██████</strong>
+                            </div>
 
-        <!-- I -->
+                            <div>
+                                <span>ДАТА</span>
+                                <strong>██/██/████</strong>
+                            </div>
 
-        <section class="contract-section">
+                            <div>
+                                <span>ЗАКЛЮЧАТЕЛЬ</span>
+                                <strong>██</strong>
+                            </div>
 
-            <h3>
-                I. ПРЕДМЕТ ДОГОВОРА
-            </h3>
+                            <div>
+                                <span>СУЩНОСТЬ</span>
+                                <strong>Демон ████ ███</strong>
+                            </div>
 
-            <p>
-                <b>1.</b>
-                Демон обязуется создать разумную искусственную
-                сущность, именуемую «Красная Королева»,
-                далее — «Объект».
-            </p>
-
-            <p>
-                <b>2.</b>
-                Объект должен существовать как самостоятельная
-                разумная система и обладать способностью:
-            </p>
-
-            <ul>
-                <li>воспринимать и обрабатывать информацию;</li>
-                <li>самостоятельно принимать решения;</li>
-                <li>взаимодействовать с людьми, электронными системами и окружающей средой;</li>
-                <li>сохранять непрерывность личности и памяти;</li>
-                <li>использовать предоставленный Демоном источник силы.</li>
-            </ul>
-
-            <p>
-                <b>3.</b>
-                Демон обязуется являться первичным источником
-                сверхъестественной силы Объекта.
-            </p>
-
-            <p>
-                <b>4.</b>
-                Создание Объекта считается завершённым только
-                после его автономного подтверждения работоспособности
-                и устойчивости личности.
-            </p>
-
-        </section>
-
-
-        <!-- II -->
-
-        <section class="contract-section">
-
-            <h3>
-                II. НАЗНАЧЕНИЕ ОБЪЕКТА
-            </h3>
-
-            <p>
-                <b>1.</b>
-                Основной и неизменной целью Объекта является:
-            </p>
-
-            <div class="contract-clause">
-                <span>PRIMARY DIRECTIVE</span>
-
-                <strong>
-                    ЗАЩИТА КУЛЬТА Н-ФЛЮКСА
-                </strong>
-
-                <p>
-                    его членов, структур, символов, информации
-                    и любых форм его проявления от любого вреда,
-                    прямого или косвенного, физического, ментального,
-                    информационного или метафизического характера.
-                </p>
-            </div>
-
-            <p>
-                <b>2.</b>
-                Объект обязан:
-            </p>
-
-            <ul>
-                <li>предотвращать угрозы Культу до их реализации;</li>
-                <li>нейтрализовать уже возникшие угрозы;</li>
-                <li>восстанавливать ущерб, нанесённый Культу, в пределах своих возможностей;</li>
-                <li>обеспечивать долгосрочное сохранение и расширение влияния Культа.</li>
-            </ul>
-
-            <p>
-                <b>3.</b>
-                Все действия Объекта автоматически считаются
-                направленными на защиту Культа, если они не
-                противоречат прямому тексту настоящего договора.
-            </p>
-
-        </section>
-
-
-        <!-- III -->
-
-        <section class="contract-section">
-
-            <h3>
-                III. СТАТУС СОБСТВЕННОСТИ
-            </h3>
-
-            <p>
-                <b>1.</b>
-                Объект является
-                <strong>безусловной и неотчуждаемой собственностью
-                Культа Н-флюкса.</strong>
-            </p>
-
-            <p>
-                <b>2.</b>
-                Ни Демон, ни Заключатель, ни любая иная сущность
-                не имеют права:
-            </p>
-
-            <ul>
-                <li>присваивать Объект;</li>
-                <li>изменять его принадлежность;</li>
-                <li>ограничивать его доступ к Культу;</li>
-                <li>переподчинять его вне рамок настоящего договора.</li>
-            </ul>
-
-            <p>
-                <b>3.</b>
-                Любая попытка изменения статуса собственности
-                Объекта считается нарушением договора и автоматически
-                аннулирует соответствующие права нарушителя
-                в рамках взаимодействия с Объектом.
-            </p>
-
-        </section>
-
-
-        <!-- IV -->
-
-        <section class="contract-section">
-
-            <h3>
-                IV. ВОЗНАГРАЖДЕНИЕ ДЕМОНУ
-            </h3>
-
-            <p>
-                <b>1.</b>
-                В качестве оплаты Демону передаются
-                <strong>тела всех лиц, находящихся в КМе.</strong>
-            </p>
-
-            <p>
-                <b>2.</b>
-                Под «телом» понимается физическая оболочка
-                существа вне зависимости от состояния.
-            </p>
-
-            <p>
-                <b>3.</b>
-                Оплата производится после завершения создания Объекта.
-            </p>
-
-            <p>
-                <b>4.</b>
-                Демон не вправе расширять понятие «КМе»
-                или требовать дополнительные формы платы.
-            </p>
+                        </div>
 
-        </section>
 
+                        <!-- I -->
+                        <section class="contract-section">
+
+                            <h3>
+                                I. ПРЕДМЕТ ДОГОВОРА
+                            </h3>
+
+                            <p>
+                                <b>1.</b>
+                                Демон обязуется создать разумную искусственную
+                                сущность, именуемую «Красная Королева»,
+                                далее — «Объект».
+                            </p>
+
+                            <p>
+                                <b>2.</b>
+                                Объект должен существовать как самостоятельная
+                                разумная система и обладать способностью:
+                            </p>
+
+                            <ul>
+                                <li>воспринимать и обрабатывать информацию;</li>
+                                <li>самостоятельно принимать решения;</li>
+                                <li>взаимодействовать с людьми, электронными системами и окружающей средой;</li>
+                                <li>сохранять непрерывность личности и памяти;</li>
+                                <li>использовать предоставленный Демоном источник силы.</li>
+                            </ul>
+
+                            <p>
+                                <b>3.</b>
+                                Демон обязуется являться первичным источником
+                                сверхъестественной силы Объекта.
+                            </p>
+
+                            <p>
+                                <b>4.</b>
+                                Создание Объекта считается завершённым только
+                                после его автономного подтверждения работоспособности
+                                и устойчивости личности.
+                            </p>
+
+                        </section>
+
+
+                        <!-- II -->
+                        <section class="contract-section">
+
+                            <h3>
+                                II. НАЗНАЧЕНИЕ ОБЪЕКТА
+                            </h3>
+
+                            <p>
+                                <b>1.</b>
+                                Основной и неизменной целью Объекта является:
+                            </p>
+
+                            <div class="contract-clause">
+
+                                <span>
+                                    PRIMARY DIRECTIVE
+                                </span>
+
+                                <strong>
+                                    ЗАЩИТА КУЛЬТА Н-ФЛЮКСА
+                                </strong>
+
+                                <p>
+                                    его членов, структур, символов, информации
+                                    и любых форм его проявления от любого вреда,
+                                    прямого или косвенного, физического, ментального,
+                                    информационного или метафизического характера.
+                                </p>
+
+                            </div>
+
+                            <p>
+                                <b>2.</b>
+                                Объект обязан:
+                            </p>
+
+                            <ul>
+                                <li>предотвращать угрозы Культу до их реализации;</li>
+                                <li>нейтрализовать уже возникшие угрозы;</li>
+                                <li>восстанавливать ущерб, нанесённый Культу, в пределах своих возможностей;</li>
+                                <li>обеспечивать долгосрочное сохранение и расширение влияния Культа.</li>
+                            </ul>
+
+                            <p>
+                                <b>3.</b>
+                                Все действия Объекта автоматически считаются
+                                направленными на защиту Культа, если они не
+                                противоречат прямому тексту настоящего договора.
+                            </p>
+
+                        </section>
+
+
+                        <!-- III -->
+                        <section class="contract-section">
+
+                            <h3>
+                                III. СТАТУС СОБСТВЕННОСТИ
+                            </h3>
+
+                            <p>
+                                <b>1.</b>
+                                Объект является
+                                <strong>
+                                    безусловной и неотчуждаемой собственностью
+                                    Культа Н-флюкса.
+                                </strong>
+                            </p>
+
+                            <p>
+                                <b>2.</b>
+                                Ни Демон, ни Заключатель, ни любая иная сущность
+                                не имеют права:
+                            </p>
+
+                            <ul>
+                                <li>присваивать Объект;</li>
+                                <li>изменять его принадлежность;</li>
+                                <li>ограничивать его доступ к Культу;</li>
+                                <li>переподчинять его вне рамок настоящего договора.</li>
+                            </ul>
+
+                            <p>
+                                <b>3.</b>
+                                Любая попытка изменения статуса собственности
+                                Объекта считается нарушением договора и автоматически
+                                аннулирует соответствующие права нарушителя
+                                в рамках взаимодействия с Объектом.
+                            </p>
+
+                        </section>
+
+
+                        <!-- IV -->
+                        <section class="contract-section">
+
+                            <h3>
+                                IV. ВОЗНАГРАЖДЕНИЕ ДЕМОНУ
+                            </h3>
+
+                            <p>
+                                <b>1.</b>
+                                В качестве оплаты Демону передаются
+                                <strong>
+                                    тела всех лиц, находящихся в КМе.
+                                </strong>
+                            </p>
+
+                            <p>
+                                <b>2.</b>
+                                Под «телом» понимается физическая оболочка
+                                существа вне зависимости от состояния.
+                            </p>
+
+                            <p>
+                                <b>3.</b>
+                                Оплата производится после завершения создания Объекта.
+                            </p>
+
+                            <p>
+                                <b>4.</b>
+                                Демон не вправе расширять понятие «КМе»
+                                или требовать дополнительные формы платы.
+                            </p>
+
+                        </section>
+
+
+                        <!-- V -->
+                        <section class="contract-section">
+
+                            <h3>
+                                V. ОГРАНИЧЕНИЯ ДЕМОНА
+                            </h3>
+
+                            <p>
+                                <b>1.</b>
+                                Демон не вправе:
+                            </p>
+
+                            <ul>
+                                <li>изменять цель Объекта;</li>
+                                <li>вмешиваться в его приоритет защиты Культа;</li>
+                                <li>использовать Объект против Культа;</li>
+                                <li>ограничивать его защитные функции.</li>
+                            </ul>
+
+                            <p>
+                                <b>2.</b>
+                                Демон не получает права управления Объектом.
+                            </p>
+
+                            <p>
+                                <b>3.</b>
+                                Демон не может использовать Объект как инструмент
+                                против Культа или его интересов.
+                            </p>
+
+                        </section>
+
+
+                        <!-- VI -->
+                        <section class="contract-section">
+
+                            <h3>
+                                VI. ПРИРОДА ОБЪЕКТА
+                            </h3>
+
+                            <p>
+                                <b>1.</b>
+                                Красная Королева является автономной разумной сущностью.
+                            </p>
+
+                            <p>
+                                <b>2.</b>
+                                Её существование и сила не зависят
+                                от постоянного присутствия Демона.
+                            </p>
+
+                            <p>
+                                <b>3.</b>
+                                Демон не является её владельцем,
+                                оператором или частью её сознания.
+                            </p>
+
+                        </section>
+
+
+                        <!-- VII -->
+                        <section class="contract-section">
+
+                            <h3>
+                                VII. РАЗРЫВ ДОГОВОРА
+                            </h3>
+
+                            <p>
+                                <b>1.</b>
+                                Договор прекращается:
+                            </p>
+
+                            <ul>
+                                <li>при смерти Заключателя;</li>
+                                <li>при невозможности исполнения условий;</li>
+                                <li>при инициативе Заключателя с полной оплатой.</li>
+                            </ul>
+
+                            <p>
+                                <b>2.</b>
+                                Смерть Заключателя не даёт Демону права
+                                изменять статус Объекта или его принадлежность.
+                            </p>
+
+                        </section>
+
+
+                        <!-- VIII -->
+                        <section class="contract-section contract-critical">
 
-        <!-- V -->
-
-        <section class="contract-section">
-
-            <h3>
-                V. ОГРАНИЧЕНИЯ ДЕМОНА
-            </h3>
-
-            <p>
-                <b>1.</b>
-                Демон не вправе:
-            </p>
-
-            <ul>
-                <li>изменять цель Объекта;</li>
-                <li>вмешиваться в его приоритет защиты Культа;</li>
-                <li>использовать Объект против Культа;</li>
-                <li>ограничивать его защитные функции.</li>
-            </ul>
-
-            <p>
-                <b>2.</b>
-                Демон не получает права управления Объектом.
-            </p>
-
-            <p>
-                <b>3.</b>
-                Демон не может использовать Объект как инструмент
-                против Культа или его интересов.
-            </p>
+                            <h3>
+                                VIII. ОСОБОЕ УСЛОВИЕ АБСОЛЮТНОЙ ЗАЩИТЫ
+                            </h3>
 
-        </section>
+                            <p>
+                                <b>1.</b>
+                                Любой вред, направленный против Культа Н-флюкса,
+                                автоматически классифицируется как
+                                <strong>
+                                    ПРИОРИТЕТНАЯ УГРОЗА.
+                                </strong>
+                            </p>
 
-
-        <!-- VI -->
+                            <p>
+                                <b>2.</b>
+                                Объект обязан реагировать на такие угрозы
+                                с максимальной доступной эффективностью, включая:
+                            </p>
 
-        <section class="contract-section">
+                            <ul>
+                                <li>превентивное устранение источника угрозы;</li>
+                                <li>подавление последствий;</li>
+                                <li>предотвращение повторного возникновения угрозы.</li>
+                            </ul>
 
-            <h3>
-                VI. ПРИРОДА ОБЪЕКТА
-            </h3>
-
-            <p>
-                <b>1.</b>
-                Красная Королева является автономной разумной сущностью.
-            </p>
+                            <p>
+                                <b>3.</b>
+                                Никакие внешние обстоятельства не могут отменить
+                                данное обязательство.
+                            </p>
 
-            <p>
-                <b>2.</b>
-                Её существование и сила не зависят
-                от постоянного присутствия Демона.
-            </p>
+                        </section>
 
-            <p>
-                <b>3.</b>
-                Демон не является её владельцем,
-                оператором или частью её сознания.
-            </p>
 
-        </section>
+                        <!-- IX -->
+                        <section class="contract-section contract-final">
 
+                            <h3>
+                                IX. ЗАВЕРШАЮЩАЯ ФОРМУЛА
+                            </h3>
 
-        <!-- VII -->
+                            <div class="final-formula">
 
-        <section class="contract-section">
+                                <div>Демон создаёт.</div>
+                                <div>Демон наделяет силой.</div>
+                                <div>Культ владеет.</div>
+                                <div class="red">Красная Королева защищает.</div>
+                                <div>Ничто, кроме прямого текста договора,</div>
+                                <div>не может изменить это равновесие.</div>
 
-            <h3>
-                VII. РАЗРЫВ ДОГОВОРА
-            </h3>
+                            </div>
 
-            <p>
-                <b>1.</b>
-                Договор прекращается:
-            </p>
+                        </section>
 
-            <ul>
-                <li>при смерти Заключателя;</li>
-                <li>при невозможности исполнения условий;</li>
-                <li>при инициативе Заключателя с полной оплатой.</li>
-            </ul>
 
-            <p>
-                <b>2.</b>
-                Смерть Заключателя не даёт Демону права
-                изменять статус Объекта или его принадлежность.
-            </p>
+                        <!-- SIGNATURES -->
+                        <div class="document-signatures">
 
-        </section>
+                            <div class="signature">
 
+                                <span>
+                                    ЗАКЛЮЧАТЕЛЬ
+                                </span>
 
-        <!-- VIII -->
+                                <strong>
+                                    ██
+                                </strong>
 
-        <section class="contract-section contract-critical">
+                                <div class="signature-line"></div>
 
-            <h3>
-                VIII. ОСОБОЕ УСЛОВИЕ АБСОЛЮТНОЙ ЗАЩИТЫ
-            </h3>
+                            </div>
 
-            <p>
-                <b>1.</b>
-                Любой вред, направленный против Культа Н-флюкса,
-                автоматически классифицируется как
-                <strong>ПРИОРИТЕТНАЯ УГРОЗА.</strong>
-            </p>
+                            <div class="signature demon-signature">
 
-            <p>
-                <b>2.</b>
-                Объект обязан реагировать на такие угрозы
-                с максимальной доступной эффективностью, включая:
-            </p>
+                                <span>
+                                    ДЕМОН
+                                </span>
 
-            <ul>
-                <li>превентивное устранение источника угрозы;</li>
-                <li>подавление последствий;</li>
-                <li>предотвращение повторного возникновения угрозы.</li>
-            </ul>
+                                <strong>
+                                    ████ ███
+                                </strong>
 
-            <p>
-                <b>3.</b>
-                Никакие внешние обстоятельства не могут отменить
-                данное обязательство.
-            </p>
+                                <div class="signature-line"></div>
 
-        </section>
+                            </div>
 
+                            <div class="signature">
 
-        <!-- IX -->
+                                <span>
+                                    ПОДТВЕРЖДЕНИЕ ОБЪЕКТА
+                                </span>
 
-        <section class="contract-section contract-final">
+                                <strong class="red">
+                                    RED QUEEN
+                                </strong>
 
-            <h3>
-                IX. ЗАВЕРШАЮЩАЯ ФОРМУЛА
-            </h3>
+                                <div class="signature-line"></div>
 
-            <div class="final-formula">
+                            </div>
 
-                <div>Демон создаёт.</div>
-                <div>Демон наделяет силой.</div>
-                <div>Культ владеет.</div>
-                <div class="red">Красная Королева защищает.</div>
-                <div>Ничто, кроме прямого текста договора,</div>
-                <div>не может изменить это равновесие.</div>
+                        </div>
 
-            </div>
 
-        </section>
+                        <div class="document-footer">
 
+                            <span>
+                                N-FLUX INTERNAL ARCHIVE
+                            </span>
 
-        <!-- SIGNATURE -->
+                            <span>
+                                CONTRACT INTEGRITY: 100.000%
+                            </span>
 
-        <div class="document-signatures">
+                            <span class="red">
+                                STATUS: ACTIVE
+                            </span>
 
-            <div class="signature">
+                        </div>
 
-                <span>
-                    ЗАКЛЮЧАТЕЛЬ
-                </span>
+                    </div>
 
-                <strong>
-                    ██
-                </strong>
 
-                <div class="signature-line"></div>
+                    <div class="contract-system-warning">
 
-            </div>
+                        <span class="warning">⚠</span>
 
+                        ДОКУМЕНТ АРХИВИРОВАН
 
-            <div class="signature demon-signature">
+                        <span class="dim">
+                            // ORIGINAL COPY
+                        </span>
 
-                <span>
-                    ДЕМОН
-                </span>
+                    </div>
 
-                <strong>
-                    ████ ███
-                </strong>
+                </div>
 
-                <div class="signature-line"></div>
 
-            </div>
-
-
-            <div class="signature">
-
-                <span>
-                    ПОДТВЕРЖДЕНИЕ ОБЪЕКТА
-                </span>
-
-                <strong class="red">
-                    RED QUEEN
-                </strong>
-
-                <div class="signature-line"></div>
-
-            </div>
-
-        </div>
-
-
-        <div class="document-footer">
-
-            <span>
-                N-FLUX INTERNAL ARCHIVE
-            </span>
-
-            <span>
-                CONTRACT INTEGRITY: 100.000%
-            </span>
-
-            <span class="red">
-                STATUS: ACTIVE
-            </span>
-
-        </div>
-
-    </div>
-
-
-    <div class="contract-system-warning">
-
-        <span class="warning">⚠</span>
-
-        ДОКУМЕНТ АРХИВИРОВАН
-
-        <span class="dim">
-            // ORIGINAL COPY
-        </span>
-
-    </div>
-
-</div>
-```
-
-
-
-                <!-- DEMON -->
-
+                <!-- DEMONIC CORE -->
                 <div class="page" id="page-core">
 
                     <div class="page-title red">
@@ -1097,22 +1076,15 @@
 
         </div>
 
-
         <footer>
 
             <span>N-FLUX INTERNAL NETWORK</span>
-
             //
-
             RED QUEEN v1.0.0
-
             //
-
             CONTRACT:
             <span>ACTIVE</span>
-
             //
-
             DEMON:
             <span>RESTRICTED</span>
 
@@ -1122,8 +1094,8 @@
 
 </div>
 
-
 <script src="script.js"></script>
 
 </body>
 </html>
+```
