@@ -2362,19 +2362,26 @@ setInterval(() => {
    GLITCH
    ========================================================= */
 
+/* =========================================================
+RED QUEEN // GLITCH ENGINE
+========================================================= */
+
 setInterval(() => {
 
-    if (Math.random() > .9) {
+    if (Math.random() > 0.88) {
 
-        document.body.style.transform =
-            `translateX(${Math.random() * 2 - 1}px)`;
+        document.body.classList.add(
+            "rq-glitch"
+        );
 
         setTimeout(() => {
 
-            document.body.style.transform = "";
+            document.body.classList.remove(
+                "rq-glitch"
+            );
 
-        }, 60);
+        }, 160);
 
     }
 
-}, 1200);
+}, 1800);
