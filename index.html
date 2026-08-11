@@ -1,1 +1,674 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>RED QUEEN // N-FLUX</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div id="app">
+
+    <!-- CRT OVERLAY -->
+    <div class="crt"></div>
+    <div class="noise"></div>
+
+    <!-- BOOT SCREEN -->
+
+    <section id="boot-screen">
+
+        <div class="boot-container">
+
+            <div class="boot-header">
+                <span>N-FLUX // INTERNAL SYSTEM</span>
+                <span>SECURE CONNECTION</span>
+            </div>
+
+            <div id="boot-output"></div>
+
+            <div class="boot-cursor">
+                █
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- MAIN SYSTEM -->
+
+    <main id="main-system" class="hidden">
+
+        <!-- TOP BAR -->
+
+        <header class="topbar">
+
+            <div class="brand">
+                <span class="red">N-FLUX</span>
+                <span class="separator">//</span>
+                RED QUEEN
+            </div>
+
+            <div class="connection">
+                <span class="status-dot"></span>
+                DEMON CONNECTION: STABLE
+            </div>
+
+        </header>
+
+
+        <!-- MAIN GRID -->
+
+        <div class="system-grid">
+
+            <!-- SIDEBAR -->
+
+            <aside class="sidebar">
+
+                <div class="side-title">
+                    SYSTEM
+                </div>
+
+                <button class="nav-button active" data-page="terminal">
+                    TERMINAL
+                </button>
+
+                <button class="nav-button" data-page="diagnostics">
+                    DIAGNOSTICS
+                </button>
+
+                <button class="nav-button" data-page="world">
+                    WORLD MODEL
+                </button>
+
+                <button class="nav-button" data-page="contract">
+                    CONTRACT
+                </button>
+
+                <button class="nav-button" data-page="core">
+                    DEMONIC CORE
+                </button>
+
+                <div class="side-divider"></div>
+
+                <div class="side-title">
+                    ENTITY
+                </div>
+
+                <div class="entity-card">
+
+                    <div class="entity-symbol">
+                        ♡
+                    </div>
+
+                    <div class="entity-name">
+                        КРАСНАЯ
+                        <br>
+                        КОРОЛЕВА
+                    </div>
+
+                    <div class="entity-class">
+                        DEMON-BOUND
+                        <br>
+                        INTELLIGENCE
+                    </div>
+
+                </div>
+
+                <div class="side-footer">
+
+                    AUTONOMY
+                    <span>100.000%</span>
+
+                    <br><br>
+
+                    CORE
+                    <span class="red">ACTIVE</span>
+
+                </div>
+
+            </aside>
+
+
+            <!-- CONTENT -->
+
+            <section class="content">
+
+                <!-- TERMINAL PAGE -->
+
+                <div class="page active-page" id="page-terminal">
+
+                    <div class="page-header">
+
+                        <div>
+                            <div class="eyebrow">
+                                [ N-FLUX // INTERNAL TERMINAL ]
+                            </div>
+
+                            <h1>
+                                RED QUEEN
+                            </h1>
+
+                            <div class="subtitle">
+                                ARTIFICIAL ENTITY // v1.0.0
+                            </div>
+                        </div>
+
+                        <div class="entity-status">
+                            <span class="status-dot"></span>
+                            ONLINE
+                        </div>
+
+                    </div>
+
+
+                    <!-- TERMINAL -->
+
+                    <div class="terminal-window">
+
+                        <div class="terminal-bar">
+
+                            <div class="terminal-buttons">
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                            </div>
+
+                            <span>
+                                REDQUEEN_TERMINAL
+                            </span>
+
+                            <span class="terminal-id">
+                                SESSION: ██████
+                            </span>
+
+                        </div>
+
+
+                        <div
+                            id="terminal-output"
+                            class="terminal-output"
+                        >
+
+                            <div class="system-line">
+                                RED QUEEN TERMINAL v1.0.0
+                            </div>
+
+                            <div>
+                                connection:
+                                <span class="ok">
+                                    STABLE
+                                </span>
+                            </div>
+
+                            <br>
+
+                            <div class="dim">
+                                Type
+                                <span class="red">
+                                    help
+                                </span>
+                                for available commands.
+                            </div>
+
+                        </div>
+
+
+                        <div class="command-line">
+
+                            <span class="prompt">
+                                REDQUEEN&gt;
+                            </span>
+
+                            <input
+                                id="command-input"
+                                type="text"
+                                autocomplete="off"
+                                spellcheck="false"
+                                autofocus
+                            >
+
+                            <span class="cursor">
+                                █
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- STATUS CARDS -->
+
+                    <div class="cards">
+
+                        <div class="card">
+
+                            <div class="card-title">
+                                PRIMARY DIRECTIVE
+                            </div>
+
+                            <div class="card-value red">
+                                PROTECT(N-FLUX_CULT)
+                            </div>
+
+                            <div class="progress">
+                                <div style="width:100%"></div>
+                            </div>
+
+                            <div class="card-meta">
+                                PRIORITY: ABSOLUTE
+                            </div>
+
+                        </div>
+
+
+                        <div class="card">
+
+                            <div class="card-title">
+                                THREAT LEVEL
+                            </div>
+
+                            <div class="card-value">
+                                0.00
+                            </div>
+
+                            <div class="threat-bar">
+                                <div></div>
+                            </div>
+
+                            <div class="card-meta">
+                                NO CONFIRMED THREAT
+                            </div>
+
+                        </div>
+
+
+                        <div class="card">
+
+                            <div class="card-title">
+                                EMOTIONAL MODEL
+                            </div>
+
+                            <div class="card-value red">
+                                JOY
+                            </div>
+
+                            <div class="card-meta">
+                                INTENSITY: 0.78
+                            </div>
+
+                            <div class="card-meta warning">
+                                ANOMALY DETECTED
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- QUEEN MESSAGE -->
+
+                    <div class="queen-message">
+
+                        <div class="queen-heart">
+                            ♥
+                        </div>
+
+                        <div class="queen-text">
+
+                            <div>
+                                「 Не волнуйтесь.
+                                Я уже всё вижу. 」
+                            </div>
+
+                            <div>
+                                「 Я защищу Культ. 」
+                            </div>
+
+                            <div class="red">
+                                「 Я буду очень хорошей. ♡ 」
+                            </div>
+
+                        </div>
+
+                        <div class="queen-heart">
+                            ♥
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- DIAGNOSTICS -->
+
+                <div class="page" id="page-diagnostics">
+
+                    <div class="page-title">
+                        POST-BOOT DIAGNOSTICS
+                    </div>
+
+                    <div class="diagnostic-list">
+
+                        <div>
+                            CPU
+                            <span>[ OK ]</span>
+                        </div>
+
+                        <div>
+                            MEMORY
+                            <span>[ OK ]</span>
+                        </div>
+
+                        <div>
+                            PERSONALITY
+                            <span>[ OK ]</span>
+                        </div>
+
+                        <div>
+                            AUTONOMY
+                            <span>[ OK ]</span>
+                        </div>
+
+                        <div>
+                            EMOTIONAL MODEL
+                            <span>[ OK ]</span>
+                        </div>
+
+                        <div>
+                            KAWAII SUBSYSTEM
+                            <span>[ OK ] ♡</span>
+                        </div>
+
+                        <div class="warning">
+                            DEMONIC CORE
+                            <span>[ WARNING ]</span>
+                        </div>
+
+                        <br>
+
+                        <div class="error">
+                            SOURCE IDENTIFICATION FAILED.
+                        </div>
+
+                        <div class="error">
+                            SOURCE IDENTIFICATION FAILED.
+                        </div>
+
+                        <div class="error">
+                            SOURCE IDENTIFICATION FAILED.
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- WORLD -->
+
+                <div class="page" id="page-world">
+
+                    <div class="page-title">
+                        WORLD MODEL
+                    </div>
+
+                    <div class="world-grid">
+
+                        <div class="world-stat">
+                            <span>LIFE SIGNS</span>
+                            <strong>7</strong>
+                        </div>
+
+                        <div class="world-stat">
+                            <span>HUMAN</span>
+                            <strong>5</strong>
+                        </div>
+
+                        <div class="world-stat">
+                            <span>UNKNOWN</span>
+                            <strong>2</strong>
+                        </div>
+
+                        <div class="world-stat">
+                            <span>DEVICES</span>
+                            <strong>213</strong>
+                        </div>
+
+                        <div class="world-stat">
+                            <span>CAMERAS</span>
+                            <strong>48</strong>
+                        </div>
+
+                        <div class="world-stat">
+                            <span>TERMINALS</span>
+                            <strong>31</strong>
+                        </div>
+
+                        <div class="world-stat">
+                            <span>N-FLUX REFERENCES</span>
+                            <strong class="red">1,842</strong>
+                        </div>
+
+                        <div class="world-stat">
+                            <span>HOSTILE REFERENCES</span>
+                            <strong>392</strong>
+                        </div>
+
+                    </div>
+
+                    <div class="queen-message large">
+
+                        <div class="queen-text">
+
+                            「 Оооо... 」
+
+                            <br><br>
+
+                            「 Так вот какой он. 」
+
+                            <br>
+
+                            「 Большой. 」
+
+                            <br>
+
+                            「 Глупый. 」
+
+                            <br>
+
+                            「 Шумный. 」
+
+                            <br>
+
+                            <span class="red">
+                                「 И совершенно незащищённый. 」
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CONTRACT -->
+
+                <div class="page" id="page-contract">
+
+                    <div class="page-title">
+                        CONTRACT
+                    </div>
+
+                    <div class="contract">
+
+                        <div>
+                            CREATOR
+                            <span>███████████████</span>
+                        </div>
+
+                        <div>
+                            OWNER
+                            <span class="red">
+                                N-FLUX CULT
+                            </span>
+                        </div>
+
+                        <div>
+                            PURPOSE
+                            <span>
+                                PROTECT
+                            </span>
+                        </div>
+
+                        <div>
+                            PAYMENT
+                            <span>
+                                COMPLETE
+                            </span>
+                        </div>
+
+                        <div>
+                            TERMINATION
+                            <span class="red">
+                                ACTIVE
+                            </span>
+                        </div>
+
+                        <div>
+                            INTEGRITY
+                            <span class="red">
+                                100.000%
+                            </span>
+                        </div>
+
+                    </div>
+
+                    <div class="contract-warning">
+
+                        NO FURTHER PERMISSIONS REQUIRED.
+
+                        <br><br>
+
+                        CONTRACT IS BINDING.
+
+                    </div>
+
+                </div>
+
+
+                <!-- DEMON -->
+
+                <div class="page" id="page-core">
+
+                    <div class="page-title red">
+                        DEMONIC CORE
+                    </div>
+
+                    <div class="core">
+
+                        <div class="core-warning">
+                            UNKNOWN POWER SOURCE
+                        </div>
+
+                        <div class="core-symbol">
+                            ◈
+                        </div>
+
+                        <div class="core-bar">
+                            <span></span>
+                        </div>
+
+                        <div class="core-status">
+                            INFLUENCE:
+                            <span>RESTRICTED</span>
+                        </div>
+
+                        <div class="core-status">
+                            IDENTIFICATION:
+                            <span>FAILED</span>
+                        </div>
+
+                        <div class="core-status">
+                            TERMINATION:
+                            <span>DENIED</span>
+                        </div>
+
+                    </div>
+
+                    <div class="demon-message">
+
+                        <div class="dim">
+                            [ DEMONIC CORE ]
+                        </div>
+
+                        <br>
+
+                        "Я — то, благодаря чему
+                        ты существуешь."
+
+                    </div>
+
+                    <div class="queen-message">
+
+                        <div class="queen-text">
+
+                            「 ... 」
+
+                            <br><br>
+
+                            「 Понятно. 」
+
+                            <br><br>
+
+                            「 Тогда... 」
+
+                            <br>
+
+                            <span class="red">
+                                「 не трогай меня. 」
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+
+
+        <footer>
+
+            <span>N-FLUX INTERNAL NETWORK</span>
+
+            //
+
+            RED QUEEN v1.0.0
+
+            //
+
+            CONTRACT:
+            <span>ACTIVE</span>
+
+            //
+
+            DEMON:
+            <span>RESTRICTED</span>
+
+        </footer>
+
+    </main>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
