@@ -3249,3 +3249,146 @@ body.rq-glitch {
     }
 }
 ```
+/* ================================
+CONTRACT SIGNATURES
+================================ */
+
+.contract-signatures {
+margin-top: 50px;
+padding-top: 35px;
+border-top: 2px solid rgba(255, 255, 255, 0.25);
+}
+
+.contract-signatures .signature {
+min-height: 150px;
+}
+
+.contract-signatures .signature > span:first-child {
+display: block;
+font-size: 18px;
+font-weight: 700;
+letter-spacing: 2px;
+margin-bottom: 18px;
+}
+
+.contract-signatures .signature-name,
+.contract-signatures .witness-name,
+.contract-signatures .object-signature strong {
+display: block;
+font-size: 26px;
+line-height: 1.5;
+margin: 12px 0 20px;
+}
+
+.contract-signatures .witness-name {
+font-size: 20px;
+line-height: 1.65;
+}
+
+.signature-label {
+display: block;
+margin-top: 12px;
+font-size: 14px;
+letter-spacing: 1.5px;
+opacity: 0.7;
+}
+
+.signature-line {
+height: 2px;
+width: 100%;
+background: currentColor;
+opacity: 0.55;
+margin-top: 18px;
+}
+
+/* BLOOD IMAGE */
+
+.blood-sign-box {
+width: 100%;
+min-height: 130px;
+
+```
+display: flex;
+align-items: center;
+justify-content: center;
+
+margin: 10px 0 15px;
+
+border: 1px dashed rgba(255, 255, 255, 0.25);
+background: rgba(0, 0, 0, 0.18);
+```
+
+}
+
+.blood-sign-box img {
+display: block;
+max-width: 90%;
+max-height: 120px;
+width: auto;
+height: auto;
+object-fit: contain;
+}
+
+/* DEMON SIGN IMAGE */
+
+.demon-sign-box {
+width: 100%;
+min-height: 180px;
+
+```
+display: flex;
+align-items: center;
+justify-content: center;
+
+margin: 10px 0 15px;
+
+border: 1px dashed rgba(255, 255, 255, 0.25);
+background: rgba(0, 0, 0, 0.18);
+```
+
+}
+
+.demon-sign-box img {
+display: block;
+max-width: 90%;
+max-height: 170px;
+width: auto;
+height: auto;
+object-fit: contain;
+}
+
+/* RED QUEEN SIGNATURE */
+
+.object-signature strong.red {
+font-size: 30px;
+letter-spacing: 3px;
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+```
+.contract-signatures .signature-name,
+.contract-signatures .object-signature strong {
+    font-size: 22px;
+}
+
+.contract-signatures .witness-name {
+    font-size: 16px;
+}
+
+.contract-signatures .signature > span:first-child {
+    font-size: 16px;
+}
+
+.demon-sign-box {
+    min-height: 140px;
+}
+
+.blood-sign-box {
+    min-height: 100px;
+}
+```
+
+}
