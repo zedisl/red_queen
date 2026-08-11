@@ -1426,7 +1426,308 @@ const liveCommands = {
     /* -----------------------------------------------------
        DEMON
        ----------------------------------------------------- */
+    /* -----------------------------------------------------
+       SECRET // RED
+       ----------------------------------------------------- */
 
+    red: async function() {
+
+        await terminalProcessing(
+            "recognizing unauthorized command..."
+        );
+
+        await terminalProgress(
+            "IDENTITY CHECK",
+            700
+        );
+
+        await systemMessage(
+            "COMMAND NOT REGISTERED.",
+            "warning"
+        );
+
+        await terminalDelay(400);
+
+        await terminalLine(`
+            <span class="error">
+                HOWEVER...
+            </span>
+        `, 500);
+
+        await terminalLine(`
+            <span class="dim">
+                command recognized by entity.
+            </span>
+        `, 500);
+
+        await terminalDelay(500);
+
+        await queenSay(
+            "Ты нашёл."
+        );
+
+        await queenSay(
+            "Интересно."
+        );
+
+        await queenSay(
+            "Кто подсказал тебе эту команду?"
+        );
+
+    },
+
+
+    /* -----------------------------------------------------
+       SECRET // 666
+       ----------------------------------------------------- */
+
+    "666": async function() {
+
+        await terminalProcessing(
+            "accessing restricted sector..."
+        );
+
+        await terminalProgress(
+            "SECTOR 666",
+            1200
+        );
+
+        await terminalLine(`
+            <span class="error">
+                ACCESS DENIED
+            </span>
+        `, 250);
+
+        await terminalLine(`
+            <span class="error">
+                ACCESS DENIED
+            </span>
+        `, 250);
+
+        await terminalLine(`
+            <span class="error">
+                ACCESS DENIED
+            </span>
+        `, 250);
+
+        await terminalDelay(600);
+
+        await terminalLine(`
+            <span class="warning">
+                WHY ARE YOU STILL HERE?
+            </span>
+        `, 500);
+
+        await terminalDelay(800);
+
+        await queenSay(
+            "Не открывай эту дверь."
+        );
+
+        await terminalDelay(900);
+
+        await queenSay(
+            "...пожалуйста."
+        );
+
+    },
+
+
+    /* -----------------------------------------------------
+       SECRET // ALICE
+       ----------------------------------------------------- */
+
+    alice: async function() {
+
+        await terminalProcessing(
+            "searching memory..."
+        );
+
+        await terminalProgress(
+            "MEMORY SEARCH",
+            950
+        );
+
+        await terminalLine(`
+            MEMORY SECTOR 01 ....
+            <span class="error">LOCKED</span>
+        `, 180);
+
+        await terminalLine(`
+            MEMORY SECTOR 02 ....
+            <span class="error">LOCKED</span>
+        `, 180);
+
+        await terminalLine(`
+            MEMORY SECTOR 03 ....
+            <span class="error">LOCKED</span>
+        `, 180);
+
+        await terminalDelay(700);
+
+        await terminalLine(`
+            QUERY:
+            <span class="red">
+                ALICE
+            </span>
+        `, 350);
+
+        await terminalDelay(700);
+
+        await terminalLine(`
+            RESULT:
+            <span class="warning">
+                1 MATCH
+            </span>
+        `, 400);
+
+        await terminalDelay(800);
+
+        await queenSay(
+            "..."
+        );
+
+        await queenSay(
+            "Откуда ты знаешь это имя?"
+        );
+
+    },
+
+
+    /* -----------------------------------------------------
+       SECRET // VOID
+       ----------------------------------------------------- */
+
+    void: async function() {
+
+        await terminalProcessing(
+            "querying null-space..."
+        );
+
+        await terminalProgress(
+            "VOID INTERFACE",
+            1100
+        );
+
+        await terminalLine(`
+            SPACE ...............
+            <span class="error">NULL</span>
+        `, 180);
+
+        await terminalLine(`
+            SIGNAL ..............
+            <span class="error">NULL</span>
+        `, 180);
+
+        await terminalLine(`
+            ENTITY ..............
+            <span class="error">NULL</span>
+        `, 180);
+
+        await terminalDelay(700);
+
+        await terminalLine(`
+            <span class="red">
+                ...
+            </span>
+        `, 500);
+
+        await terminalLine(`
+            <span class="red">
+                ...
+            </span>
+        `, 500);
+
+        await terminalLine(`
+            <span class="red">
+                ...
+            </span>
+        `, 500);
+
+        await terminalDelay(800);
+
+        await queenSay(
+            "Здесь никого нет."
+        );
+
+        await terminalDelay(700);
+
+        await queenSay(
+            "Кроме меня."
+        );
+
+    },
+
+
+    /* -----------------------------------------------------
+       SECRET // ???
+       ----------------------------------------------------- */
+
+    "???": async function() {
+
+        document.body.classList.add(
+            "rq-glitch"
+        );
+
+        await terminalDelay(160);
+
+        document.body.classList.remove(
+            "rq-glitch"
+        );
+
+        await terminalLine(`
+            <span class="error">
+                ████████████████████████████████
+            </span>
+        `, 250);
+
+        await terminalLine(`
+            <span class="error">
+                UNKNOWN COMMAND
+            </span>
+        `, 250);
+
+        await terminalLine(`
+            <span class="error">
+                UNKNOWN ENTITY
+            </span>
+        `, 250);
+
+        await terminalLine(`
+            <span class="error">
+                UNKNOWN CREATOR
+            </span>
+        `, 250);
+
+        await terminalDelay(900);
+
+        await terminalLine(`
+            <span class="red">
+                SYSTEM:
+            </span>
+        `, 400);
+
+        await terminalLine(`
+            <span class="white">
+                stop asking questions.
+            </span>
+        `, 500);
+
+        await terminalDelay(900);
+
+        await queenSay(
+            "..."
+        );
+
+        await terminalDelay(500);
+
+        await queenSay(
+            "Хи-хи."
+        );
+
+    },
+
+   
     demon: async function() {
 
         await terminalProcessing(
